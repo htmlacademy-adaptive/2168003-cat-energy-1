@@ -16,10 +16,10 @@
     <nav class="main-menu">
       <button class="main-menu__toggle-menu" type="button">Переключить меню</button>
       <ul class="main-menu__items nav-list">
-        <li class="nav-list__item nav-list__item--active">
+        <li class="nav-list__item">
           <a href="#">Главная</a>
         </li>
-        <li class="nav-list__item">
+        <li class="nav-list__item nav-list__item--active">
           <a href="#">Каталог продукции</a>
         </li>
         <li class="nav-list__item">
@@ -32,78 +32,62 @@
 
     <h1 class="visually-hidden">Cat Energy - лучше питание для котов и котиков</h1>
 
-    <section class="hero">
-      <h2 class="hero__title">Функциональное питание для котов</h2>
-      <p class="hero__subtitle">Занялся собой? Займись котом!</p>
-      <a href="#" class="hero__call-to-action button">Подобрать программу</a>
-    </section>
+    <section class="program-selection">
+      <h2 class="program-selection__title">Подбор программы</h2>
+      <p class="program-selection__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <form class="program-selection__form form" action="https://echo.htmlacademy.ru/" method="post">
 
-    <section class="options">
-      <h2 class="visually-hidden">Выберите подходящий план для вашего питомца</h2>
-      <div class="options__card options__card--fat-loss option-card">
-        <h3 class="option-card__title">Похудение</h3>
-        <p class="option-card__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
-          Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-        <a href="#" class="option-card__link">Каталог Slim</a>
-      </div>
-      <div class="options__card options__card--gain-mass option-card">
-        <h3 class="option-card__title">Набор массы</h3>
-        <p class="option-card__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-        <a href="#" class="option-card__link">Каталог Pro</a>
-      </div>
-    </section>
+        <fieldset class="form__section form__section--cols-2">
+          <legend class="form__section-name visually-hidden">Данные кота</legend>
+          <label class="form__field-name form__field-name--required" for="cat-name">Имя</label>
+          <input class="form__field" type="text" name="cat-name" id="cat-name" required>
+          <label class="form__field-name form__field-name--required" for="at-weight">Вес (кг)</label>
+          <input class="form__field" type="number" name="cat-weight" id="cat-weight" required>
+          <label class="form__field-name" for="at-age">Возраст (лет)</label>
+          <input class="form__field" type="number" name="cat-age" id="cat-age">
+        </fieldset>
 
-    <section class="features">
-      <h2 class="features__title">Как это работает</h2>
-      <ol class="features__list">
-        <li class="features__item">
-          <div class="features__icon features__icon--leaf"></div>
-          <p class="features__description">Функциональное питание содержит только полезные питательные вещества.</p>
-        </li>
-        <li class="features__item">
-          <div class="features__icon features__icon--powder"></div>
-          <p class="features__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
-        </li>
-        <li class="features__item">
-          <div class="features__icon features__icon--utensils"></div>
-          <p class="features__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
-        </li>
-        <li class="features__item">
-          <div class="features__icon features__icon--clock"></div>
-          <p class="features__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-        </li>
-      </ol>
-    </section>
+        <fieldset class="form__section form__section--cols-2">
+          <legend class="form__section-name">Контактные данные (владельца кота)</legend>
+          <label class="form__field-name form__field-name--required" for="user-mail">E-mail</label>
+          <input class="form__field form__field--email" type="email" name="user-mail" id="user-mail" required>
+          <label class="form__field-name form__field-name--required" for="user-phone">Телефон</label>
+          <input class="form__field form__field--phone" type="email" name="user-phone" id="user-phone" required>
+        </fieldset>
 
-    <section class="example">
-      <h2 class="example__title">Живой пример</h2>
-      <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-        Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
-        часов в день. </p>
-      <div class="example__stats stats-list">
-        <div class="stats-list__item">
-          <dt class="stats-list__number">5 кг</dt>
-          <dd class="stats-list__description">снижение веса</dd>
-        </div>
-        <div class="stats-list__item">
-          <dt class="stats-list__number">60 дней</dt>
-          <dd class="stats-list__description">затрачено времени</dd>
-        </div>
-      </div>
-      <p class="example__total">Затраты на питание: <span class="example__total-number">15000 руб.</span></p>
-      <div class="example__image-slider slider-comparison">
-        <img src="./img/cat-before.png" class="slider-comparison__image" width="560" height="512"
-          alt="Кот Борис до еды Cat Energy">
-        <img src="./img/cat-after.png" class="slider-comparison__image" width="560" height="512"
-          alt="Кот Борис после еды Cat Energy">
-        <button class="slider-comparison__curtain" type="button"><span class="visually-hidden">Сравнить одного и того же
-            Бориса - до и после</span></button>
-      </div>
-    </section>
+        <fieldset class="form__section">
+          <legend class="form__section-name">Комментарий</legend>
+          <label class="form__field-name visually-hidden" for="user-commentary">Поле для комментариев</label>
+          <textarea class="form__field" name="user-commentary" id="user-commentary">Расскажите обо всех повадках кота</textarea>
+        </fieldset>
 
-    <section class="information">
-      <h2 class="information__title">Приглашаем к сотрудничеству!</h2>
-      <p class="information__address">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</p>
+        <fieldset class="form__section">
+          <legend class="form__section-name">Дополнительно</legend>
+          <label class="custom-checkbox-wrapper">
+            <input class="custom-checkbox-wrapper__actual-checkbox visually-hidden" type="checkbox" name="sweetener" checked>
+            <span class="custom-checkbox-wrapper__custom-checkbox"></span>
+            <span class="custom-checkbox-wrapper__label">Cахарозаменитель</span>
+          </label>
+          <label class="custom-checkbox-wrapper">
+            <input class="custom-checkbox-wrapper__actual-checkbox visually-hidden" type="checkbox" name="sweetener">
+            <span class="custom-checkbox-wrapper__custom-checkbox"></span>
+            <span class="custom-checkbox-wrapper__label">Питьевая вода</span>
+          </label>
+          <label class="custom-checkbox-wrapper">
+            <input class="custom-checkbox-wrapper__actual-checkbox visually-hidden" type="checkbox" name="sweetener">
+            <span class="custom-checkbox-wrapper__custom-checkbox"></span>
+            <span class="custom-checkbox-wrapper__label">Молоко</span>
+          </label>
+          <label class="custom-checkbox-wrapper">
+            <input class="custom-checkbox-wrapper__actual-checkbox visually-hidden" type="checkbox" name="sweetener">
+            <span class="custom-checkbox-wrapper__custom-checkbox"></span>
+            <span class="custom-checkbox-wrapper__label">Витамины</span>
+          </label>
+        </fieldset>
+
+        <button class="form__submit-button button" type="submit">Отправить заявку</button>
+        <p class="form__footnote">* — Обязательные поля</p>
+      </form>
     </section>
 
     <section class="map">
