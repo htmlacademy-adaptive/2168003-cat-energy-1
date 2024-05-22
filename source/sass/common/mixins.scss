@@ -1,0 +1,22 @@
+@mixin mp0 {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-list {
+  @include mp0;
+  list-style-type: none;
+}
+
+@mixin header-2 {
+  @include mp0;
+  font-family: $primary-font;
+  font-size: 60px;
+  line-height: 60px;
+}
+
+@mixin header-3 {
+  @include header-2;
+  font-size: 36px;
+  line-height: 36px;
+}

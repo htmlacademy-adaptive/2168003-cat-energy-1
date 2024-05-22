@@ -1,0 +1,28 @@
+.stats-list {
+  display: flex;
+  gap: 42px;
+}
+
+.stats-list__number {
+  font-family: $primary-font;
+  font-size: 30px;
+  line-height: 37px;
+  text-transform: uppercase;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  text-align: center;
+  padding: 15px;
+}
+
+.stats-list__description {
+  font-family: $alternate-font;
+  font-size: 14px;
+  line-height: 14px;
+  color: #444444;
+  position: relative;
+  top: -50%;
+  left: -50%;
+  transform: translateX(50%) translateY(90%);
+  border: 11px solid $secondary-color;
+  background-color: $secondary-color;
+}
