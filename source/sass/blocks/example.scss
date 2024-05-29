@@ -1,0 +1,38 @@
+.example {
+  padding-left: 110px;
+  padding-right: 110px;
+  padding-bottom: 75px;
+  display: flex;
+  position: relative;
+  background-color: $secondary-color;
+  justify-content: space-between;
+}
+
+.example__title {
+  @include header-2;
+  margin-bottom: 146px;
+}
+
+.example__description {
+  color: #444444;
+  font-family: $alternate-font;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 69px;
+  width: 436px;
+}
+
+.example__stats {
+  margin-bottom: 55px;
+}
+
+.example__total {
+  font-family: $primary-font;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.example__total-number {
+  margin-left: 63px;
+}

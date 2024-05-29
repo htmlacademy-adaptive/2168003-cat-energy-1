@@ -1,0 +1,15 @@
+.catalog {
+  padding-left: 110px;
+  padding-right: 110px;
+}
+
+.catalog__title {
+  @include header-2;
+}
+
+.catalog__products-list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+}

@@ -1,0 +1,16 @@
+.program-selection {
+  padding-left: 110px;
+  padding-right: 110px;
+  margin-bottom: 79px;
+}
+
+.program-selection__title {
+  @include header-2;
+}
+
+.program-selection__description {
+  font-family: $primary-font;
+  font-size: 20px;
+  line-height: 30px;
+  width: 323px;
+}

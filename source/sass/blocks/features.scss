@@ -1,0 +1,37 @@
+.features {
+  padding-left: 110px;
+  padding-right: 110px;
+}
+
+.features__title {
+  @include header-2;
+  margin-bottom: 32px;
+}
+
+.features__list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-between;
+}
+
+.features__item {
+  width: 246px;
+  height: 280px;
+  position: relative;
+}
+
+.features__icon {
+  width: 80px;
+  height: 80px;
+  background-color: $primary-color;
+  position: absolute;
+}
+
+.features__description {
+  @include mp0;
+  font-family: $alternate-font;
+  font-size: 16px;
+  line-height: 24px;
+  color: #444444;
+  margin-top: 151px;
+}

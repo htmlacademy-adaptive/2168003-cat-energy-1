@@ -1,0 +1,38 @@
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  padding-left: 110px;
+  padding-right: 110px;
+  margin-bottom: 71px;
+}
+
+.options__card {
+  width: calc(50% - 170px);
+  background-color: $secondary-color;
+  padding: 77px 61px 59px 52px;
+}
+
+.options__title {
+  @include mp0;
+  font-family: $primary-font;
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-bottom: 73px;
+}
+
+.options__description {
+  @include mp0;
+  font-family: $alternate-font;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 23px;
+}
+
+.options__link {
+  font-family: $primary-font;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+}

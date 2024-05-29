@@ -1,0 +1,29 @@
+.slider-comparison {
+  position: relative;
+  width: 560px;
+}
+
+.slider-comparison__image {
+  position: absolute;
+}
+
+.slider-comparison__image--first {
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.slider-comparison__image--second {
+  clip-path: polygon(100% 0, 50% 0, 50% 100%, 100% 100%);
+}
+
+.slider-comparison__curtain {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #666666;
+  background-color: #ffffff;
+  position: relative;
+  left: 260px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}

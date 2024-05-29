@@ -1,0 +1,27 @@
+.goods-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.goods-table__row {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #cdcdcd;
+}
+
+.goods-table__row:last-of-type {
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.goods-table__name {
+  font-family: $primary-font;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.goods-table__volume,
+.goods-table__price {
+  font-family: $alternate-font;
+  font-size: 16px;
+  line-height: 20px;
+}

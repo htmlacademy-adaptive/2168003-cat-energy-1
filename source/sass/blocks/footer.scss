@@ -1,0 +1,21 @@
+.footer {
+  min-height: 169px;
+  background-color: $secondary-color;
+  display: flex;
+  justify-content: space-between;
+  padding: 73px 110px;
+}
+
+.footer__social-list {
+  @include reset-list;
+  display: flex;
+  gap: 24px;
+}
+
+.footer__html-academy-logo {
+  font-family: $alternate-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #444444;
+}
