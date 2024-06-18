@@ -1,38 +1,110 @@
 .options {
   display: flex;
   flex-wrap: wrap;
-  gap: 80px;
-  padding-left: 110px;
-  padding-right: 110px;
-  margin-bottom: 71px;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-around;
+  margin-bottom: 20px;
 }
 
 .options__card {
-  width: calc(50% - 170px);
+  width: 280px;
   background-color: $secondary-color;
-  padding: 77px 61px 59px 52px;
+  padding: 30px 33px 18px 20px;
+  position: relative;
 }
+
 
 .options__title {
   @include mp0;
   font-family: $primary-font;
-  font-size: 36px;
+  font-size: 24px;
+  line-height: 37px;
   text-transform: uppercase;
-  margin-bottom: 73px;
+  margin: 0 0 29px 70px;
+  position: relative;
+}
+
+.options__title::before {
+  width: 50px;
+  height: 50px;
+  content: "";
+  position: absolute;
+  background-color: $primary-color;
+  border-radius: 50%;
+  left: -70px;
 }
 
 .options__description {
   @include mp0;
   font-family: $alternate-font;
-  font-size: 16px;
-  line-height: 24px;
-  margin-bottom: 23px;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 38px;
 }
 
 .options__link {
   font-family: $primary-font;
-  font-size: 20px;
+  font-size: 16px;
+  line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+}
+
+@media (min-width: $tablet-width) {
+  .options {
+    margin-bottom: 48px;
+  }
+
+  .options__card {
+    width: 708px;
+    padding: 77px 316px 53px 52px;
+  }
+
+  .options__title {
+    margin: 0 0 24px 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .options__title::before {
+    width: 200px;
+    height: 200px;
+    left: 400px;
+  }
+
+  .options__description {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 48px;
+  }
+
+  .options__link {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .options {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 71px;
+  }
+
+  .options__card {
+    width: 570px;
+    padding: 77px 61px 55px 52px;
+  }
+
+  .options__title {
+    margin: 0 0 73px 162px;
+  }
+
+  .options__title::before {
+    width: 100px;
+    height: 100px;
+    left: -162px;
+    top: -25px;
+  }
 }

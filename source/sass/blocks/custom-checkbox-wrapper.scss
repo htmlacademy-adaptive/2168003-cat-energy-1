@@ -4,3 +4,15 @@
   margin-left: 60px;
   text-transform: uppercase;
 }
+
+@media (min-width: $tablet-width) {
+  .custom-checkbox-wrapper {
+    width: 50%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .custom-checkbox-wrapper {
+    width: auto;
+  }
+}
