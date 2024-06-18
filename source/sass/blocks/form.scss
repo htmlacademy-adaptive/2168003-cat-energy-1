@@ -111,6 +111,12 @@
   line-height: 16px;
 }
 
+.form__checkboxes-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 13px;
+}
+
 @media (min-width: $tablet-width) {
   .form__field-name {
     font-size: 20px;
@@ -137,8 +143,8 @@
   }
 
   .form__checkboxes-wrapper {
-    display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     row-gap: 32px;
     justify-content: space-between;
   }
