@@ -1,4 +1,4 @@
-.options {
+.options__wrapper {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -53,7 +53,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .options {
+  .options__wrapper {
     margin-bottom: 48px;
   }
 
@@ -86,7 +86,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .options {
+  .options__wrapper {
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 71px;

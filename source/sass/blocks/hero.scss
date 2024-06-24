@@ -1,4 +1,4 @@
-.hero {
+.hero__wrapper {
   padding: 0;
   margin-bottom: 20px;
 }
@@ -62,7 +62,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .hero {
+  .hero__wrapper {
     padding: 0 0 533px 120px;
   }
 
@@ -119,14 +119,17 @@
 
 @media (min-width: $desktop-width) {
   .hero {
-    padding: 55px 0 184px 80px;
     position: relative;
+  }
+
+  .hero__wrapper {
+    padding: 55px 0 184px 80px;
     margin-bottom: 80px;
   }
 
   .hero__cat-image {
-    top: -175px;
-    right: -53px;
+    bottom: 0;
+    right: 0;
     width: 720px;
     height: 694px;
     background-color: $primary-color;

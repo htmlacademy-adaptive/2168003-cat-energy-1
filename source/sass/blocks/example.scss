@@ -1,10 +1,14 @@
-.example {
+.example__wrapper {
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: #eaeaea;
   justify-content: space-between;
   padding-top: 20px;
+}
+
+.example {
+  position: relative;
+  background-color: #eaeaea;
 }
 
 .example__title {
@@ -39,8 +43,6 @@
   .example {
     background-color: #ffffff;
     height: 1036px;
-    gap: 99px;
-    justify-content: flex-start;
   }
 
   .example::after {
@@ -53,6 +55,11 @@
     bottom: 0;
     left: 0;
     z-index: 1;
+  }
+
+  .example__wrapper {
+    gap: 99px;
+    justify-content: flex-start;
   }
 
   .example__title {
@@ -90,6 +97,9 @@
 @media (min-width: $desktop-width) {
   .example {
     height: auto;
+  }
+
+  .example__wrapper {
     flex-direction: row;
     gap: 184px;
   }

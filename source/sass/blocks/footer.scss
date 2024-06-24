@@ -1,6 +1,8 @@
 .footer {
-  min-height: 240px;
   background-color: $secondary-color;
+}
+
+.footer__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +30,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .footer {
+  .footer__wrapper {
     padding: 62px 30px 55px;
     flex-direction: row;
     min-height: 147px;
@@ -42,7 +44,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .footer {
+  .footer__wrapper {
     padding: 73px 110px 66px;
   }
 }

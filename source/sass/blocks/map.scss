@@ -1,5 +1,6 @@
 .map {
   padding: 0;
+  background-color: #eaeaea;
 }
 
 .map__text {
@@ -85,5 +86,6 @@
 
   .map__actual-map {
     position: absolute;
+    left: 0;
   }
 }
