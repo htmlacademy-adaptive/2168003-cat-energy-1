@@ -1,16 +1,32 @@
 .program-selection {
-  padding-left: 110px;
-  padding-right: 110px;
-  margin-bottom: 79px;
+  margin-bottom: 32px;
 }
 
 .program-selection__title {
   @include header-2;
+  font-size: 36px;
+  line-height: 36px;
+  margin: 27px 0 37px;
+  text-align: left;
 }
 
 .program-selection__description {
   font-family: $primary-font;
-  font-size: 20px;
-  line-height: 30px;
-  width: 323px;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin: 0 0 39px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .program-selection__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .program-selection__description {
+    font-size: 20px;
+    line-height: 30px;
+    width: 340px;
+  }
 }

@@ -1,15 +1,28 @@
 .button {
-  display: inline-block;
-  padding: 14px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: $primary-color;
   color: #ffffff;
   text-decoration: none;
   font-family: $primary-font;
   text-transform: uppercase;
   text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  height: 40px;
+  border: none;
 }
 
 .button--secondary {
   background-color: $secondary-color;
   color: #444444;
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

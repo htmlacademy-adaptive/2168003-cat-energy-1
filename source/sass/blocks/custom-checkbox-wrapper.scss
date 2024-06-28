@@ -1,6 +1,22 @@
 .custom-checkbox-wrapper__label {
   font-family: $primary-font;
-  font-size: 20px;
+  font-size: 16px;
   margin-left: 60px;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .custom-checkbox-wrapper {
+    width: 50%;
+  }
+
+  .custom-checkbox-wrapper__label {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .custom-checkbox-wrapper {
+    width: auto;
+  }
 }

@@ -1,9 +1,15 @@
 .footer {
-  min-height: 169px;
   background-color: $secondary-color;
+}
+
+.footer__wrapper {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 73px 110px;
+  gap: 40px;
+  padding: 40px 20px;
 }
 
 .footer__social-list {
@@ -18,4 +24,27 @@
   line-height: 20px;
   text-decoration: none;
   color: #444444;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .footer__wrapper {
+    padding: 62px 30px 55px;
+    flex-direction: row;
+    min-height: 147px;
+  }
+
+  .footer__html-academy-logo {
+    justify-content: center;
+    align-items: center;
+    width: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer__wrapper {
+    padding: 73px 110px 66px;
+  }
 }
