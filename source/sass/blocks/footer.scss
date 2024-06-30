@@ -2,6 +2,37 @@
   background-color: $secondary-color;
 }
 
+.footer__logo {
+  fill: #111111;
+  transition: fill 250ms;
+
+  &:hover,
+  &:focus {
+    fill: #3e3e3e;
+  }
+
+  &:active {
+    fill: #6b6b6b;
+  }
+}
+
+.footer__social-icon {
+  fill: #666666;
+  transition:
+    fill 250ms,
+    opacity 250ms;
+
+  &:hover,
+  &:focus {
+    fill: #68b738;
+  }
+
+  &:active {
+    fill: #68b738;
+    opacity: 0.3;
+  }
+}
+
 .footer__wrapper {
   display: flex;
   flex-direction: column;
@@ -27,6 +58,26 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  transition: opacity 250ms;
+  gap: 23px;
+
+  &-icon {
+    transition:
+      opacity 250ms,
+      fill 250ms;
+  }
+
+  &:hover &-icon,
+  &:focus &-icon,
+  &-icon:hover,
+  &-icon:focus {
+    fill: #68b738;
+  }
+
+  &:active,
+  &-icon:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {

@@ -26,9 +26,43 @@
   position: relative;
   left: 120px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(50%);
   cursor: pointer;
-  z-index: 0;
+  z-index: 2;
+
+  &-icon {
+    position: absolute;
+    fill: #666666;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid #68b738;
+  }
+
+  &:hover ~ .slider-comparison__image-container::before,
+  &:focus ~ .slider-comparison__image-container::before {
+    background-color: #68b738;
+  }
+
+  &:hover &-icon,
+  &:focus &-icon {
+    fill: #68b738;
+  }
+
+  &:active {
+    border: 2px solid transparentize(#5eaa2f, 0.6);
+  }
+
+  &:active ~ .slider-comparison__image-container::before {
+    background-color: #5eaa2f;
+    opacity: 0.6;
+  }
+
+  &:active &-icon {
+    fill: transparentize(#5eaa2f, 0.6);
+  }
 }
 
 .slider-comparison__image-container::before {
