@@ -23,6 +23,30 @@
   }
 }
 
+@media (max-width: calc($tablet-width - 1px)) {
+  .main-header--no-js {
+    flex-direction: column;
+    padding: 20px 0 0 0;
+  }
+
+  .main-header--no-js .main-menu__toggle-menu {
+    display: none;
+  }
+
+  .main-header--no-js .main-menu__items {
+    position: relative;
+    width: 320px;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+  }
+
+  .main-header--no-js .main-header__logo {
+    margin-bottom: 20px;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .main-header {
     width: 704px;
