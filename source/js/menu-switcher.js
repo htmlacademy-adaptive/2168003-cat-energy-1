@@ -10,4 +10,3 @@ btn.addEventListener('click', function () {
     menu.classList.add('main-menu__items--opened');
   }
 });
-
