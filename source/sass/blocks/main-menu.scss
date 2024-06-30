@@ -9,25 +9,97 @@
   font-size: 20px;
 }
 
-.main-menu__items--hidden {
+.main-menu__items--closed {
   display: none;
 }
 
-.main-menu__item a {
+.main-menu__link {
   text-decoration: none;
   color: #000000;
   position: relative;
+  transition: opacity 250ms;
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
 }
 
-.main-menu__item--active a::after {
-  content: "";
-  height: 2px;
-  width: 100%;
-  display: block;
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  background-color: $primary-color;
+@media (max-width: calc($tablet-width - 1px)) {
+  .main-menu {
+    position: relative;
+  }
+
+  .main-menu__toggle-menu {
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 1.5px;
+      background-color: #000000;
+      top: 0;
+      left: 0;
+      box-shadow: 0 8px 0 #000000, 0 16px 0 #000000;
+    }
+
+    &:has(+.main-menu__items--opened) {
+      width: 24px;
+      height: 24px;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 25px;
+        height: 1.5px;
+        background-color: #000000;
+        box-shadow: none;
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .main-menu__items--opened {
+    position: absolute;
+    width: 320px;
+    background-color: #ffffff;
+    left: -276px;
+    top: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+  }
+
+  .main-menu__item {
+    width: 100%;
+    padding: 22px;
+    text-align: center;
+    border-bottom: 1px solid #e6e6e6;
+
+    &:first-of-type {
+      border-top: 1px solid #e6e6e6;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -45,6 +117,21 @@
     gap: 33px;
     font-size: 18px;
     line-height: 24px;
+  }
+
+  .main-menu__item--active {
+    cursor: default;
+  }
+
+  .main-menu__item--active a::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    background-color: $primary-color;
   }
 }
 

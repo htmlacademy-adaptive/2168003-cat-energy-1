@@ -1,6 +1,6 @@
 .map {
   padding: 0;
-  background-color: #eaeaea;
+  background-color: #ffffff;
 }
 
 .map__text {
@@ -8,6 +8,8 @@
   background-color: #ffffff;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .map__text--alternate-bg {
@@ -31,10 +33,11 @@
   color: #444444;
   width: 140px;
   display: inline-block;
+  justify-self: end;
 }
 
 .map__actual-map {
-  background-color: #9d7da7;
+  background: #ffffff url("../../img/map-mobile.png") no-repeat center center / cover;
   height: 362px;
 }
 
@@ -43,6 +46,7 @@
     padding: 60px 70px;
     display: flex;
     justify-content: space-between;
+    width: 768px;
   }
 
   .map__title {
@@ -65,7 +69,7 @@
 
   .map__actual-map {
     height: 400px;
-    width: 100%;
+    background: #ffffff url("../../img/map-tablet.jpg") no-repeat center center / cover;
   }
 }
 
@@ -84,8 +88,14 @@
     left: 110px;
   }
 
+  .map__text--alternate-bg {
+    background-color: #ffffff;
+  }
+
   .map__actual-map {
     position: absolute;
     left: 0;
+    width: 100%;
+    background: #ffffff url("../../img/map-desktop.jpg") no-repeat center center / cover;
   }
 }

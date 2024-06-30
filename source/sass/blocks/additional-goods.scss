@@ -1,5 +1,18 @@
 .additional-goods {
+  position: relative;
+  overflow-x: hidden;
   margin-bottom: 32px;
+
+  &::before {
+    content: "";
+    height: 2px;
+    width: 50%;
+    left: 50%;
+    background-color: #68b738;
+    position: absolute;
+    top: 14px;
+    z-index: -1;
+  }
 }
 
 .additional-goods__title {
@@ -7,6 +20,11 @@
   font-size: 24px;
   line-height: 24px;
   margin-bottom: 36px;
+  position: relative;
+  width: fit-content;
+  background-color: #ffffff;
+  border-right: 20px solid #ffffff;
+  z-index: 2;
 }
 
 .additional-goods__list {
@@ -57,6 +75,17 @@
   padding: 187px 61px 43px 58px;
   background-color: $primary-color;
   text-align: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 59px;
+    left: 101px;
+    width: 78px;
+    height: 81px;
+    background-image: url("../../img/icon-gift.svg");
+  }
 }
 
 .additional-goods__banner-description {
@@ -68,10 +97,22 @@
 }
 
 @media (min-width: $tablet-width) {
+  .additional-goods {
+    margin-bottom: 75px;
+    width: auto;
+
+    &::before {
+      left: 0;
+      top: 22px;
+      width: 100%;
+    }
+  }
+
   .additional-goods__title {
     font-size: 36px;
     line-height: 36px;
-    margin-left: 40px;
+    border-right: 40px solid #ffffff;
+    border-left: 40px solid #ffffff;
   }
 
   .additional-goods__item {
@@ -95,10 +136,6 @@
   .additional-goods__banner {
     height: 200px;
     padding: 71px 125px 69px 421px;
-  }
-
-  .additional-goods {
-    margin-bottom: 75px;
   }
 }
 
@@ -151,5 +188,9 @@
     width: 245px;
     height: 100%;
     padding: 185px 42px 43px;
+
+    &::before {
+      left: 65px;
+    }
   }
 }

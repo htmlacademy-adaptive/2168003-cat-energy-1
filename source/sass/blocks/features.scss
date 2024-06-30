@@ -33,20 +33,57 @@
   position: relative;
   margin-left: 20px;
 
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+    background-color: $primary-color;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &--leaf::after {
+    height: 28px;
+    width: 25px;
+    background-image: url("../../img/leaf-icon.svg");
+    left: -61px;
+    top: 16px;
+  }
+
+  &--powder::after {
+    height: 29px;
+    width: 27px;
+    background-image: url("../../img/powder-icon.svg");
+    left: -64px;
+    top: 16px;
+  }
+
+  &--utensils::after {
+    height: 30px;
+    width: 25px;
+    background-image: url("../../img/utensils-icon.svg");
+    left: -61px;
+    top: 16px;
+  }
+
+  &--clock::after {
+    height: 31px;
+    width: 27px;
+    background-image: url("../../img/clock-icon.svg");
+    left: -64px;
+    top: 16px;
+  }
+
   @media (min-width: $desktop-width) {
     font-size: 16px;
     line-height: 24px;
   }
-}
-
-.features__description::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: -80px;
-  width: 60px;
-  height: 60px;
-  background-color: $primary-color;
 }
 
 @media (min-width: $tablet-width) {
@@ -72,6 +109,27 @@
 
   .features__description {
     margin-left: 0;
+
+    // I left separate declarations just in case for more precise tuning during PP tweaking
+    &--leaf::after {
+      top: -93px;
+      left: 20px;
+    }
+
+    &--powder::after {
+      top: -95px;
+      left: 17px;
+    }
+
+    &--utensils::after {
+      top: -96px;
+      left: 17px;
+    }
+
+    &--clock::after {
+      top: -96px;
+      left: 17px;
+    }
   }
 
   .features__description::before {
