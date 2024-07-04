@@ -12,6 +12,29 @@
   background-color: $secondary-color;
   padding: 30px 33px 18px 20px;
   position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    background-size: cover;
+  }
+
+  &--fat-loss::before {
+    background-image: url("./../../img/lost-fat-icon.svg");
+    width: 36px;
+    height: 50px;
+    left: 27px;
+    top: 21px;
+  }
+
+  &--gain-mass::before {
+    background-image: url("./../../img/gain-mass-icon.svg");
+    width: 67px;
+    height: 28px;
+    left: 12px;
+    top: 35px;
+  }
 }
 
 
@@ -41,6 +64,17 @@
   font-size: 14px;
   line-height: 18px;
   margin-bottom: 38px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 1px;
+    background-color: #d9d9d9;
+    bottom: -23px;
+    left: 0;
+  }
 }
 
 .options__link {
@@ -50,6 +84,33 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+  transition: opacity 250ms;
+
+  &:hover .options__arrow {
+    transform: scale(1.44);
+  }
+
+  &:active,
+  &:active .options__arrow {
+    opacity: 0.3;
+  }
+}
+
+.options__arrow {
+  margin-left: 15px;
+  position: relative;
+  top: -2px;
+  transition:
+    transform 250ms,
+    opacity 250ms;
+}
+
+.options__arrow line {
+  stroke: #000000;
+}
+
+.options__arrow path {
+  fill: #000000;
 }
 
 @media (min-width: $tablet-width) {
@@ -60,18 +121,32 @@
   .options__card {
     width: 708px;
     padding: 77px 316px 53px 52px;
+
+    &--fat-loss::before {
+      width: 141px;
+      height: 194px;
+      left: 482px;
+      top: 68px;
+    }
+
+    &--gain-mass::before {
+      width: 271px;
+      height: 113px;
+      left: 422px;
+      top: 135px;
+    }
   }
 
   .options__title {
     margin: 0 0 24px 0;
     font-size: 36px;
     line-height: 36px;
-  }
 
-  .options__title::before {
-    width: 200px;
-    height: 200px;
-    left: 400px;
+    &::before {
+      width: 200px;
+      height: 200px;
+      left: 400px;
+    }
   }
 
   .options__description {
@@ -95,6 +170,20 @@
   .options__card {
     width: 570px;
     padding: 77px 61px 55px 52px;
+
+    &--fat-loss::before {
+      width: 71px;
+      height: 97px;
+      left: 64px;
+      top: 49px;
+    }
+
+    &--gain-mass::before {
+      width: 137px;
+      height: 57px;
+      left: 28px;
+      top: 72px;
+    }
   }
 
   .options__title {
