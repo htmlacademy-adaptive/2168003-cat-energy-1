@@ -6,10 +6,14 @@
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicons/favicon-vector.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/180x180.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
-  <header class="main-header container container--increased"> <!-- add .main-header--no-js to disable JavaScript-->
+  <header class="main-header container container--increased main-header--no-js">
     <a href="#" class="main-header__logo">
       <img src="./img/logo.svg" class="main-header__logo-img" height="59" width="70" alt="Логотип Cat Energy">
     </a>
@@ -159,8 +163,11 @@
       <div class="map__container">
         <h2 class="visually-hidden">Контактная информация</h2>
         <div class="map__text">
-          <p class="map__title">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="map__address">ул. Большая Конюшенная, д. 19/8<br><span class="map__city">Санкт-Петербург</span></p>
+          <div class="map__text-container">
+            <p class="map__title">Приглашаем к сотрудничеству дилеров!</p>
+            <p class="map__address">ул. Большая Конюшенная, д. 19/8<br><span class="map__city">Санкт-Петербург</span>
+            </p>
+          </div>
         </div>
         <div class="map__actual-map"></div>
       </div>
