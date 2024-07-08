@@ -6,10 +6,14 @@
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicons/favicon-vector.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/180x180.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
-  <header class="main-header container"> <!-- add .main-header--no-js to disable JavaScript-->
+  <header class="main-header container main-header--no-js">
     <a href="#" class="main-header__logo">
       <img src="./img/logo.svg" class="main-header__logo-img" height="59" width="70" alt="Логотип Cat Energy">
     </a>
@@ -46,8 +50,13 @@
         <li class="catalog__item product-card">
           <div class="product-card__info">
             <a class="product-card__link product-card__link--image" href="#">
-              <img class="product-card__image" src="./img/catalog/catalog-1.png" width="161" height="171"
-                alt="Cat Energy Курица">
+              <picture>
+                <source media="(min-width: 768px)"
+                  srcset="./img/catalog/tablet/catalog-1.png 1x, ./img/catalog/tablet/catalog-1@2x.png 2x">
+                <img class="product-card__image"
+                  srcset="./img/catalog/mobile/catalog-1.png 1x, ./img/catalog/mobile/catalog-1@2x.png 2x"
+                  src="./img/catalog/mobile/catalog-1.png" width="161" height="171" alt="Cat Energy Курица">
+              </picture>
             </a>
             <div class="product-card__text">
               <a class="product-card__link" href="#">
@@ -75,8 +84,13 @@
         <li class="catalog__item product-card">
           <div class="product-card__info">
             <a class="product-card__link product-card__link--image" href="#">
-              <img class="product-card__image" src="./img/catalog/catalog-2.png" width="161" height="171"
-                alt="Cat Energy Курица">
+              <picture>
+                <source media="(min-width: 768px)"
+                  srcset="./img/catalog/tablet/catalog-2.png 1x, ./img/catalog/tablet/catalog-2@2x.png 2x">
+                <img class="product-card__image"
+                  srcset="./img/catalog/mobile/catalog-2.png 1x, ./img/catalog/mobile/catalog-2@2x.png 2x"
+                  src="./img/catalog/mobile/catalog-2.png" width="161" height="171" alt="Cat Energy Курица">
+              </picture>
             </a>
             <div class="product-card__text">
               <a class="product-card__link" href="#">
@@ -103,8 +117,15 @@
 
         <li class="catalog__item product-card">
           <div class="product-card__info">
-            <a class="product-card__link product-card__link--image" href="#"><img class="product-card__image"
-                src="./img/catalog/catalog-3.png" width="161" height="171" alt="Cat Energy Курица"></a>
+            <a class="product-card__link product-card__link--image" href="#">
+              <picture>
+                <source media="(min-width: 768px)"
+                  srcset="./img/catalog/tablet/catalog-3.png 1x, ./img/catalog/tablet/catalog-3@2x.png 2x">
+                <img class="product-card__image"
+                  srcset="./img/catalog/mobile/catalog-3.png 1x, ./img/catalog/mobile/catalog-3@2x.png 2x"
+                  src="./img/catalog/mobile/catalog-3.png" width="161" height="171" alt="Cat Energy Курица">
+              </picture>
+            </a>
             <div class="product-card__text">
               <a class="product-card__link" href="#">
                 <h3 class="product-card__title">Cat Energy Pro<br>500 Г</h3>
@@ -130,8 +151,15 @@
 
         <li class="catalog__item product-card">
           <div class="product-card__info">
-            <a class="product-card__link product-card__link--image" href="#"><img class="product-card__image"
-                src="./img/catalog/catalog-4.png" width="161" height="171" alt="Cat Energy Курица"></a>
+            <a class="product-card__link product-card__link--image" href="#">
+              <picture>
+                <source media="(min-width: 768px)"
+                  srcset="./img/catalog/tablet/catalog-4.png 1x, ./img/catalog/tablet/catalog-4@2x.png 2x">
+                <img class="product-card__image"
+                  srcset="./img/catalog/mobile/catalog-4.png 1x, ./img/catalog/mobile/catalog-4@2x.png 2x"
+                  src="./img/catalog/mobile/catalog-4.png" width="161" height="171" alt="Cat Energy Курица">
+              </picture>
+            </a>
             <div class="product-card__text">
               <a class="product-card__link" href="#">
                 <h3 class="product-card__title">Cat Energy Pro<br>1000 Г</h3>
@@ -157,8 +185,15 @@
 
         <li class="catalog__item product-card">
           <div class="product-card__info">
-            <a class="product-card__link product-card__link--image" href="#"><img class="product-card__image"
-                src="./img/catalog/catalog-5.png" width="161" height="171" alt="Cat Energy Курица"></a>
+            <a class="product-card__link product-card__link--image" href="#">
+              <picture>
+                <source media="(min-width: 768px)"
+                  srcset="./img/catalog/tablet/catalog-5.png 1x, ./img/catalog/tablet/catalog-5@2x.png 2x">
+                <img class="product-card__image"
+                  srcset="./img/catalog/mobile/catalog-5.png 1x, ./img/catalog/mobile/catalog-5@2x.png 2x"
+                  src="./img/catalog/mobile/catalog-5.png" width="161" height="171" alt="Cat Energy Курица">
+              </picture>
+            </a>
             <div class="product-card__text">
               <a class="product-card__link" href="#">
                 <h3 class="product-card__title">Cat Energy Pro<br>500 Г</h3>
@@ -184,8 +219,15 @@
 
         <li class="catalog__item product-card">
           <div class="product-card__info">
-            <a class="product-card__link product-card__link--image" href="#"><img class="product-card__image"
-                src="./img/catalog/catalog-6.png" width="161" height="171" alt="Cat Energy Курица"></a>
+            <a class="product-card__link product-card__link--image" href="#">
+              <picture>
+                <source media="(min-width: 768px)"
+                  srcset="./img/catalog/tablet/catalog-6.png 1x, ./img/catalog/tablet/catalog-6@2x.png 2x">
+                <img class="product-card__image"
+                  srcset="./img/catalog/mobile/catalog-6.png 1x, ./img/catalog/mobile/catalog-6@2x.png 2x"
+                  src="./img/catalog/mobile/catalog-6.png" width="161" height="171" alt="Cat Energy Курица">
+              </picture>
+            </a>
             <div class="product-card__text">
               <a class="product-card__link" href="#">
                 <h3 class="product-card__title">Cat Energy Pro<br>1000 Г</h3>
@@ -212,8 +254,15 @@
 
         <li class="catalog__item product-card">
           <div class="product-card__info">
-            <a class="product-card__link product-card__link--image" href="#"><img class="product-card__image"
-                src="./img/catalog/catalog-7.png" width="161" height="171" alt="Cat Energy Курица"></a>
+            <a class="product-card__link product-card__link--image" href="#">
+              <picture>
+                <source media="(min-width: 768px)"
+                  srcset="./img/catalog/tablet/catalog-7.png 1x, ./img/catalog/tablet/catalog-7@2x.png 2x">
+                <img class="product-card__image"
+                  srcset="./img/catalog/mobile/catalog-7.png 1x, ./img/catalog/mobile/catalog-7@2x.png 2x"
+                  src="./img/catalog/mobile/catalog-1.png" width="161" height="171" alt="Cat Energy Курица">
+              </picture>
+            </a>
             <div class="product-card__text">
               <a class="product-card__link" href="#">
                 <h3 class="product-card__title">Cat Energy Pro<br>500 Г</h3>
@@ -306,8 +355,11 @@
       <div class="map__container">
         <h2 class="visually-hidden">Контактная информация</h2>
         <div class="map__text map__text--alternate-bg">
-          <p class="map__title">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="map__address">ул. Большая Конюшенная, д. 19/8<br><span class="map__city">Санкт-Петербург</span></p>
+          <div class="map__text-container">
+            <p class="map__title">Приглашаем к сотрудничеству дилеров!</p>
+            <p class="map__address">ул. Большая Конюшенная, д. 19/8<br><span class="map__city">Санкт-Петербург</span>
+            </p>
+          </div>
         </div>
         <div class="map__actual-map"></div>
       </div>

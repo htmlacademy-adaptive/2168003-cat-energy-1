@@ -49,24 +49,20 @@
   display: flex;
   align-items: center;
 
-  &--email::after {
-    content: "";
-    position: absolute;
-    width: 17px;
-    height: 13px;
-    right: 0;
-    top: 0;
-    background-image: url("../../img/icon-envelope.svg");
+  &--email,
+  &--phone {
+    background-repeat: no-repeat;
+    background-position: right 18px center;
   }
 
-  &--phone::after {
-    content: "";
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    right: 0;
-    top: 0;
-    background-image: url("../../img/icon-phone.svg");
+  &--email {
+    background-image: url("../../img/icons/envelope.svg");
+    background-size: 17px 13px;
+  }
+
+  &--phone {
+    background-image: url("../../img/icons/phone.svg");
+    background-size: 15px;
   }
 }
 
@@ -213,44 +209,14 @@
   row-gap: 13px;
 }
 
-.custom-checkbox-wrapper {
-  position: relative;
-  cursor: pointer;
-}
-
-.custom-checkbox-wrapper__custom-checkbox {
-  width: 40px;
-  height: 40px;
-  border: 1px solid #cdcdcd;
-  display: block;
-  top: -4px;
-  position: absolute;
-  transition: border 250ms;
-}
-
-.custom-checkbox-wrapper__actual-checkbox:disabled ~ .custom-checkbox-wrapper__custom-checkbox,
-.custom-checkbox-wrapper__actual-checkbox:disabled ~ .custom-checkbox-wrapper__custom-checkbox::after,
-.custom-checkbox-wrapper__actual-checkbox:disabled ~ .custom-checkbox-wrapper__label,
 .form__actual-radio:disabled ~ .form__custom-radio,
 .form__actual-radio:disabled ~ .form__custom-radio::after,
 .form__actual-radio:disabled ~ .form__radio-label {
   opacity: 0.3;
 }
 
-.custom-checkbox-wrapper__actual-checkbox:hover ~ .custom-checkbox-wrapper__custom-checkbox,
 .form__radio-input:hover .form__custom-radio {
   border: 1px solid #bababa;
-}
-
-.custom-checkbox-wrapper__actual-checkbox:checked ~ .custom-checkbox-wrapper__custom-checkbox::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 24px;
-  height: 19px;
-  background-image: url("../../img/icon-checkmark.svg");
 }
 
 @media (min-width: $tablet-width) {
@@ -347,18 +313,25 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: flex-start;
   }
 
   .form__section--two-cols .form__fields-group {
     width: 570px;
   }
 
+  .form__fields-group {
+    gap: 27px;
+  }
+
+  .form__fields-group:first-of-type {
+    margin-bottom: 0;
+  }
+
   .form__radio-group {
     padding: 0;
     justify-content: flex-start;
     flex-direction: column;
-    min-height: 196px;
     gap: 25px;
   }
 

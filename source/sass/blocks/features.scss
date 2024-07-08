@@ -23,6 +23,10 @@
   padding: 0 0 0 60px;
 }
 
+.features__number {
+  display: none;
+}
+
 .features__description {
   @include mp0;
   font-family: $alternate-font;
@@ -51,7 +55,7 @@
   &--leaf::after {
     height: 28px;
     width: 25px;
-    background-image: url("../../img/leaf-icon.svg");
+    background-image: url("../../img/icons/leaf.svg");
     left: -61px;
     top: 16px;
   }
@@ -59,7 +63,7 @@
   &--powder::after {
     height: 29px;
     width: 27px;
-    background-image: url("../../img/powder-icon.svg");
+    background-image: url("../../img/icons/powder.svg");
     left: -64px;
     top: 16px;
   }
@@ -67,7 +71,7 @@
   &--utensils::after {
     height: 30px;
     width: 25px;
-    background-image: url("../../img/utensils-icon.svg");
+    background-image: url("../../img/icons/utensils.svg");
     left: -61px;
     top: 16px;
   }
@@ -75,7 +79,7 @@
   &--clock::after {
     height: 31px;
     width: 27px;
-    background-image: url("../../img/clock-icon.svg");
+    background-image: url("../../img/icons/clock.svg");
     left: -64px;
     top: 16px;
   }
@@ -105,6 +109,18 @@
     flex-shrink: 0;
     width: 230px;
     padding: 121px 56px 57px 0;
+  }
+
+  .features__number {
+    position: absolute;
+    top: -30px;
+    left: 90px;
+    font-size: 280px;
+    line-height: 280px;
+    color: #f2f2f2;
+    font-family: $primary-font;
+    display: block;
+    z-index: -1;
   }
 
   .features__description {
@@ -145,5 +161,14 @@
 
   .features__list {
     column-gap: 93px;
+  }
+
+  .features__item {
+    padding: 151px 26px 57px 0;
+  }
+
+  .features__number {
+    top: 0;
+    left: 120px;
   }
 }
