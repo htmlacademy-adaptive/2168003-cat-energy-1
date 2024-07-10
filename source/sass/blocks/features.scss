@@ -1,6 +1,7 @@
 .features__title {
   @include header-2;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
+  letter-spacing: -1px;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 32px;
@@ -42,6 +43,7 @@
     display: block;
     position: absolute;
     left: -80px;
+    top: -1px;
     width: 60px;
     height: 60px;
     background-color: $primary-color;
@@ -56,32 +58,32 @@
     height: 28px;
     width: 25px;
     background-image: url("../../img/icons/leaf.svg");
-    left: -61px;
-    top: 16px;
+    left: -62px;
+    top: 14px;
   }
 
   &--powder::after {
     height: 29px;
     width: 27px;
     background-image: url("../../img/icons/powder.svg");
-    left: -64px;
-    top: 16px;
+    left: -63px;
+    top: 14px;
   }
 
   &--utensils::after {
     height: 30px;
     width: 25px;
     background-image: url("../../img/icons/utensils.svg");
-    left: -61px;
-    top: 16px;
+    left: -64px;
+    top: 13px;
   }
 
   &--clock::after {
     height: 31px;
     width: 27px;
     background-image: url("../../img/icons/clock.svg");
-    left: -64px;
-    top: 16px;
+    left: -63px;
+    top: 13px;
   }
 
   @media (min-width: $desktop-width) {
@@ -91,10 +93,15 @@
 }
 
 @media (min-width: $tablet-width) {
+  .features {
+    margin-bottom: 68px;
+  }
+
   .features__title {
-    margin-bottom: 72px;
+    margin-bottom: 62px;
     font-size: 60px;
     line-height: 60px;
+    letter-spacing: -2px;
   }
 
   .features__list {
@@ -102,7 +109,7 @@
     flex-wrap: wrap;
     column-gap: 153px;
     justify-content: flex-start;
-    row-gap: 37px;
+    row-gap: 67px;
   }
 
   .features__item {
@@ -114,7 +121,7 @@
   .features__number {
     position: absolute;
     top: -30px;
-    left: 90px;
+    left: 116px;
     font-size: 280px;
     line-height: 280px;
     color: #f2f2f2;
@@ -125,42 +132,50 @@
 
   .features__description {
     margin-left: 0;
+    font-size: 16px;
+    line-height: 24px;
+    width: 245px;
 
-    // I left separate declarations just in case for more precise tuning during PP tweaking
+    &::before {
+      width: 80px;
+      height: 80px;
+      top: -111px;
+      left: 0;
+    }
+
     &--leaf::after {
-      top: -93px;
-      left: 20px;
+      top: -84px;
+      left: 27px;
     }
 
     &--powder::after {
-      top: -95px;
-      left: 17px;
+      top: -85px;
+      left: 28px;
     }
 
     &--utensils::after {
-      top: -96px;
-      left: 17px;
+      top: -86px;
+      left: 27px;
     }
 
     &--clock::after {
-      top: -96px;
-      left: 17px;
+      top: -86px;
+      left: 27px;
     }
-  }
-
-  .features__description::before {
-    top: -111px;
-    left: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .features {
+    margin-bottom: 66px;
+  }
+
   .features__title {
     margin-bottom: 32px;
   }
 
   .features__list {
-    column-gap: 93px;
+    column-gap: 95px;
   }
 
   .features__item {
@@ -169,6 +184,6 @@
 
   .features__number {
     top: 0;
-    left: 120px;
+    left: 111px;
   }
 }

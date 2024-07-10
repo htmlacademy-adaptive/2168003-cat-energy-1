@@ -39,14 +39,17 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 40px;
+  gap: 37px;
   padding: 40px 20px;
 }
 
 .footer__social-list {
   @include reset-list;
   display: flex;
-  gap: 24px;
+  gap: 28px;
+  position: relative;
+  top: 1px;
+  left: -3px;
 }
 
 .footer__html-academy-logo {
@@ -60,6 +63,7 @@
   width: 100%;
   transition: opacity 250ms;
   gap: 23px;
+  align-items: center;
 
   &-icon {
     transition:
@@ -82,7 +86,7 @@
 
 @media (min-width: $tablet-width) {
   .footer__wrapper {
-    padding: 62px 30px 55px;
+    padding: 59px 30px 55px;
     flex-direction: row;
     min-height: 147px;
   }
@@ -92,10 +96,15 @@
     align-items: center;
     width: auto;
   }
+
+  .footer__social-list {
+    top: 1px;
+    left: 15px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .footer__wrapper {
-    padding: 73px 110px 66px;
+    padding: 69px 110px 66px;
   }
 }

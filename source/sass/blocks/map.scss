@@ -59,6 +59,7 @@
     width: 768px;
     display: flex;
     justify-content: space-between;
+    padding: 60px 70px 59px 69px;
   }
 
   .map__title {
@@ -93,15 +94,25 @@
   .map {
     position: relative;
     height: 400px;
+    margin-top: -22px;
+    z-index: 3;
   }
 
   .map__text {
     width: 565px;
-    padding: 60px 80px;
+    padding: 60px 75px 60px 80px;
     position: absolute;
     z-index: 1;
-    top: 135px;
+    top: 94px;
     left: 110px;
+  }
+
+  .map__text-container {
+    padding: 0;
+  }
+
+  .map__address {
+    text-align: left;
   }
 
   .map__text--alternate-bg {

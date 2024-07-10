@@ -1,7 +1,7 @@
 .custom-checkbox-wrapper__label {
   font-family: $primary-font;
   font-size: 16px;
-  margin-left: 60px;
+  margin-left: 45px;
   text-transform: uppercase;
 }
 
@@ -11,8 +11,8 @@
 }
 
 .custom-checkbox-wrapper__custom-checkbox {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border: 1px solid #cdcdcd;
   display: block;
   top: -4px;
@@ -42,12 +42,22 @@
 }
 
 @media (min-width: $tablet-width) {
+  .custom-checkbox-wrapper__custom-checkbox {
+    width: 40px;
+    height: 40px;
+  }
+
   .custom-checkbox-wrapper {
     width: 50%;
   }
 
+  .custom-checkbox-wrapper:nth-of-type(2n) {
+    padding-left: 31px;
+  }
+
   .custom-checkbox-wrapper__label {
     font-size: 20px;
+    margin-left: 60px;
   }
 }
 

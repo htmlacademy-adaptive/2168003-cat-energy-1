@@ -1,7 +1,8 @@
 .stats-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 42px;
+  gap: 33px;
+  margin-bottom: 11px;
 }
 
 .stats-list__number {
@@ -21,9 +22,10 @@
   display: block;
   font-family: $alternate-font;
   font-size: 12px;
+  line-height: 12px;
   color: #444444;
   position: relative;
-  top: -12px;
+  top: -8px;
   left: 17px;
   border-left: 10px solid #eaeaea;
   border-right: 10px solid #eaeaea;
@@ -33,15 +35,33 @@
 }
 
 @media (min-width: $tablet-width) {
+  .stats-list {
+    width: 368px;
+    gap: 44px;
+  }
+
   .stats-list__description {
     border-color: #ffffff;
     background-color: #ffffff;
-    top: -14px;
-    left: 13px;
+    top: -8px;
+    left: 5px;
+    width: 150px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .stats-list__number {
+    font-size: 30px;
+    line-height: 37px;
+    padding-bottom: 19px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .stats-list {
+    margin-bottom: 33px;
+  }
+
   .stats-list__number,
   .stats-list__description,
   .stats-list__item {
@@ -49,11 +69,9 @@
   }
 
   .stats-list__description {
-    font-size: 14px;
-    line-height: 14px;
     background-color: #f2f2f2;
     border-color: #f2f2f2;
-    top: -8px;
-    left: 52px;
+    top: -10px;
+    left: 5px;
   }
 }

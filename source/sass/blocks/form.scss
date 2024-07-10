@@ -4,7 +4,7 @@
   display: flex;
   gap: 24px;
   justify-content: space-between;
-  margin: 0 auto 26px;
+  margin: 0 auto 14px;
   flex-direction: column;
   position: relative;
 }
@@ -16,16 +16,18 @@
 .form__fields-group {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 13px;
   position: relative;
 }
 
 .form__fields-group:first-of-type {
-  margin-bottom: 46px;
+  margin-bottom: 10px;
 }
 
 .form__fields-group--with-borders {
-  padding: 20px;
+  padding-top: 19px;
+  margin-left: -20px;
+  max-width: 100%;
 }
 
 .form__radio-item {
@@ -35,11 +37,11 @@
 .form__fields-group--with-borders::before {
   content: "";
   width: 320px;
-  height: 100%;
+  height: calc(100% - 27px);
   margin: 0 auto;
   position: absolute;
-  top: 0;
-  left: -20px;
+  top: 12px;
+  left: 0;
   border-top: 1px solid #e7e7e7;
   border-bottom: 1px solid #e7e7e7;
   display: block;
@@ -52,7 +54,7 @@
   &--email,
   &--phone {
     background-repeat: no-repeat;
-    background-position: right 18px center;
+    background-position: right 13px center;
   }
 
   &--email {
@@ -70,7 +72,7 @@
   font-family: $primary-font;
   color: #444444;
   text-transform: uppercase;
-  margin-right: 12px;
+  margin-right: 14px;
   font-size: 16px;
   line-height: 18px;
 }
@@ -85,7 +87,7 @@
 
 .form__field-input {
   border: 1px solid #e7e7e7;
-  padding: 11px 20px;
+  padding: 13px 14px;
   font-size: 16px;
   line-height: 18px;
   font-family: $primary-font;
@@ -112,6 +114,8 @@
 .form__field-input--textarea {
   width: 100%;
   line-height: 30px;
+  height: 156px;
+  padding-top: 10px;
 }
 
 .form__radio-group {
@@ -178,13 +182,14 @@
   font-size: 24px;
   line-height: 26px;
   font-family: $primary-font;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
   text-wrap: wrap;
   position: relative;
   width: fit-content;
   background-color: #ffffff;
-  border-right: 20px solid #ffffff;
+  border-right: 25px solid #ffffff;
   z-index: 2;
+  letter-spacing: -0.2px;
 }
 
 .form__submit-group {
@@ -206,7 +211,8 @@
 .form__checkboxes-wrapper {
   display: flex;
   flex-direction: column;
-  row-gap: 13px;
+  row-gap: 18px;
+  margin-bottom: 23px;
 }
 
 .form__actual-radio:disabled ~ .form__custom-radio,
@@ -226,6 +232,17 @@
 
   .form__field-input {
     font-size: 20px;
+    padding: 11px 18px;
+  }
+
+  .form__fields-group--with-borders {
+    margin-left: 0;
+    border: 1px solid #e7e7e7;
+    padding: 6px 6px 27px;
+  }
+
+  .form__fields-group {
+    gap: 18px;
   }
 
   .form__fields-group:first-of-type {
@@ -234,11 +251,6 @@
 
   .form__fields-group--with-borders::before {
     display: none;
-  }
-
-  .form__fields-group--with-borders {
-    border: 1px solid #e7e7e7;
-    padding: 23px 27px 27px;
   }
 
   .form__section {
@@ -250,7 +262,11 @@
     line-height: 36px;
     border-right: 40px solid #ffffff;
     border-left: 40px solid #ffffff;
-    margin: 0 0 76px -40px;
+    margin: 0 0 71px -42px;
+  }
+
+  .form__section-name-separator {
+    display: none;
   }
 
   .form__section-name br {
@@ -260,17 +276,18 @@
   .form__section--with-line::before {
     width: 100%;
     left: 0;
-    top: 18px;
+    top: 22px;
   }
 
   .form__radio-label {
     font-size: 20px;
+    margin-left: 60px;
   }
 
   .form__checkboxes-wrapper {
     flex-wrap: wrap;
     flex-direction: row;
-    row-gap: 32px;
+    row-gap: 41px;
     justify-content: space-between;
   }
 
@@ -281,18 +298,62 @@
   }
 
   .form__submit-button {
-    flex-grow: 1;
+    width: 284px;
     height: 54px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .form__section--additional {
+    margin-bottom: 35px;
   }
 
   .form__footnote {
-    margin: 0 60px 0 110px;
+    margin: 0 61px 25px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .form__custom-radio {
+    width: 40px;
+    height: 40px;
+    top: -11px;
+  }
+
+  .form__radio-input input:checked ~ .form__custom-radio::after {
+    width: 18px;
+    height: 18px;
+  }
+
+  .form__radio-group {
+    padding: 26px 20px 0;
+    gap: 22px;
+  }
+
+  .form__section--contact-data {
+    margin-bottom: -7px;
+  }
+
+  .form__section-name--commentary {
+    margin-bottom: 87px;
+  }
+
+  .form__field-input--textarea {
+    height: 176px;
+  }
+
+  .form__section--commentary {
+    margin-bottom: 60px;
+  }
+
+  .form__section-name--additional {
+    margin-bottom: 62px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .form__section-name {
-    margin-bottom: 78px;
+    margin-bottom: 75px;
   }
 
   .form__fields-group--near {
@@ -302,11 +363,11 @@
   }
 
   .form__fields-group--near .form__field {
-    width: 50%;
+    width: 570px;
   }
 
   .form__fields-group--with-borders {
-    padding: 36px 40px 35px 39px;
+    padding: 37px 40px 35px 27px;
   }
 
   .form__section--two-cols {
@@ -321,7 +382,7 @@
   }
 
   .form__fields-group {
-    gap: 27px;
+    gap: 19px;
   }
 
   .form__fields-group:first-of-type {
@@ -332,7 +393,7 @@
     padding: 0;
     justify-content: flex-start;
     flex-direction: column;
-    gap: 25px;
+    gap: 22px;
   }
 
   .form__submit-group {
@@ -346,5 +407,50 @@
   .form__footnote {
     margin-left: 80px;
     font-size: 16px;
+  }
+
+  .form__section {
+    margin-bottom: 56px;
+  }
+
+  .form__section--contact-data {
+    margin-bottom: 67px;
+  }
+
+  .form__fields-group--near.form__fields-group {
+    gap: 80px;
+  }
+
+  .form__field--email,
+  .form__field--phone {
+    background-position: right 17px center;
+  }
+
+  .form__section-name--commentary {
+    margin-bottom: 80px;
+  }
+
+  .form__section--commentary {
+    margin-bottom: 67px;
+  }
+
+  .form__section-name--additional {
+    margin-bottom: 60px;
+  }
+
+  .form__section--additional {
+    margin-bottom: 43px;
+  }
+
+  .form__checkboxes-wrapper {
+    padding-right: 97px;
+  }
+
+  .custom-checkbox-wrapper:nth-of-type(2) {
+    margin-left: -79px;
+  }
+
+  .custom-checkbox-wrapper:nth-of-type(3) {
+    left: -15px;
   }
 }

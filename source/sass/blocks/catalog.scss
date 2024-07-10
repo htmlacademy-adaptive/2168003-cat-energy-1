@@ -5,7 +5,8 @@
 .catalog__title {
   @include header-2;
   line-height: 36px;
-  margin: 27px 0 41px 20px;
+  margin: 27px 0 41px -1px;
+  letter-spacing: -1px;
 }
 
 .catalog__products-list {
@@ -23,7 +24,8 @@
   .catalog__title {
     font-size: 60px;
     line-height: 60px;
-    margin: 65px 0 84px;
+    margin: 52px 0 85px;
+    letter-spacing: -2px;
   }
 
   .catalog__products-list {
@@ -39,5 +41,11 @@
 
   .catalog__title {
     margin-bottom: 84px;
+    margin-top: 61px;
+  }
+
+  .catalog__products-list {
+    column-gap: 80px;
+    row-gap: 63px;
   }
 }

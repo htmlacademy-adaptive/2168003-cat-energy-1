@@ -6,6 +6,10 @@
   padding-top: 20px;
 }
 
+.example__description-desktop-separators {
+  display: none;
+}
+
 .example {
   position: relative;
   background-color: #eaeaea;
@@ -13,8 +17,9 @@
 
 .example__title {
   @include header-2;
-  margin-bottom: 40px;
+  margin: 3px 0 40px;
   color: #000000;
+  letter-spacing: -1px;
 }
 
 .example__description {
@@ -22,15 +27,16 @@
   font-family: $alternate-font;
   font-size: 14px;
   line-height: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   width: 280px;
 }
 
 .example__stats {
-  margin-bottom: 55px;
+  margin-bottom: 8px;
 }
 
 .example__total {
+  @include mp0;
   font-family: $primary-font;
   text-transform: uppercase;
   font-size: 14px;
@@ -43,6 +49,7 @@
   .example {
     background-color: #ffffff;
     height: 1036px;
+    margin-bottom: 26px;
   }
 
   .example::after {
@@ -52,13 +59,13 @@
     height: 462px;
     background-color: #eaeaea;
     position: absolute;
-    bottom: 0;
+    bottom: -24px;
     left: 0;
     z-index: 1;
   }
 
   .example__wrapper {
-    gap: 99px;
+    gap: 67px;
     justify-content: flex-start;
   }
 
@@ -66,6 +73,7 @@
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 60px;
+    letter-spacing: -2px;
   }
 
   .example__description {
@@ -85,7 +93,8 @@
   .example__total {
     text-align: right;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 28px;
+    padding-top: 9px;
   }
 
   .example__total-number {
@@ -95,17 +104,23 @@
 }
 
 @media (min-width: $desktop-width) {
+  .example__description-desktop-separators {
+    display: inline;
+  }
+
   .example {
     height: auto;
+    margin-bottom: 24px;
   }
 
   .example__wrapper {
     flex-direction: row;
     gap: 184px;
+    padding-top: 0;
   }
 
   .example::after {
-    top: 136px;
+    top: 139px;
     background-color: #f2f2f2;
     min-height: 462px;
     height: auto;
@@ -119,11 +134,12 @@
   .example__total {
     z-index: 2;
     position: relative;
+    margin-bottom: 69px;
   }
 
   .example__description,
   .example__stats {
-    width: 436px;
+    width: 475px;
   }
 
   .example__stats {
