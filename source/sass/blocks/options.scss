@@ -4,7 +4,7 @@
   flex-direction: column;
   gap: 20px;
   justify-content: space-around;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
 .options__card {
@@ -46,16 +46,30 @@
   text-transform: uppercase;
   margin: 0 0 29px 70px;
   position: relative;
-}
 
-.options__title::before {
-  width: 50px;
-  height: 50px;
-  content: "";
-  position: absolute;
-  background-color: $primary-color;
-  border-radius: 50%;
-  left: -70px;
+  &::before {
+    width: 50px;
+    height: 50px;
+    content: "";
+    position: absolute;
+    background-color: $primary-color;
+    border-radius: 50%;
+    left: -70px;
+    top: -5px;
+  }
+
+  // It's needed for Pixel Perfect
+  .options__card--fat-loss & {
+    top: -1px;
+    letter-spacing: -1px;
+  }
+
+  // It's needed for Pixel Perfect
+  .options__card--gain-mass & {
+    top: 1px;
+    left: 2px;
+    letter-spacing: -1px;
+  }
 }
 
 .options__description {
@@ -63,7 +77,7 @@
   font-family: $alternate-font;
   font-size: 14px;
   line-height: 18px;
-  margin-bottom: 38px;
+  margin-bottom: 41px;
   position: relative;
 
   &::after {
@@ -74,6 +88,11 @@
     background-color: #d9d9d9;
     bottom: -23px;
     left: 0;
+  }
+
+  // Purely for PP
+  .options__card--gain-mass & {
+    margin-bottom: 43px;
   }
 }
 
@@ -97,9 +116,9 @@
 }
 
 .options__arrow {
-  margin-left: 15px;
+  margin-left: 14px;
   position: relative;
-  top: -2px;
+  top: -1px;
   transition:
     transform 250ms,
     opacity 250ms;
@@ -115,25 +134,36 @@
 
 @media (min-width: $tablet-width) {
   .options__wrapper {
-    margin-bottom: 48px;
+    margin-bottom: 46px;
+    gap: 31px;
   }
 
   .options__card {
     width: 708px;
-    padding: 77px 316px 53px 52px;
+    padding: 77px 316px 58px 52px;
 
     &--fat-loss::before {
       width: 141px;
       height: 194px;
-      left: 482px;
-      top: 68px;
+      left: 474px;
+      top: 80px;
     }
 
     &--gain-mass::before {
       width: 271px;
       height: 113px;
-      left: 422px;
+      left: 410px;
       top: 135px;
+    }
+
+    &--gain-mass {
+      & .options__title::before {
+        left: 391px;
+      }
+
+      .options__description {
+        margin-bottom: 59px;
+      }
     }
   }
 
@@ -145,18 +175,24 @@
     &::before {
       width: 200px;
       height: 200px;
-      left: 400px;
+      left: 394px;
+      top: 14px;
     }
   }
 
   .options__description {
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 48px;
+    margin-bottom: 58px;
   }
 
   .options__link {
     font-size: 20px;
+  }
+
+  .options__arrow {
+    margin-left: 22px;
+    top: -3px;
   }
 }
 
@@ -169,20 +205,20 @@
 
   .options__card {
     width: 570px;
-    padding: 77px 61px 55px 52px;
+    padding: 80px 61px 61px 52px;
 
     &--fat-loss::before {
       width: 71px;
       height: 97px;
-      left: 64px;
-      top: 49px;
+      left: 66px;
+      top: 43px;
     }
 
     &--gain-mass::before {
       width: 137px;
       height: 57px;
-      left: 28px;
-      top: 72px;
+      left: 31px;
+      top: 69px;
     }
   }
 
@@ -190,10 +226,25 @@
     margin: 0 0 73px 162px;
   }
 
+  .options__card--gain-mass .options__title {
+    top: -1px;
+    left: 0;
+  }
+
   .options__title::before {
     width: 100px;
     height: 100px;
+    left: -163px;
+    top: -30px;
+  }
+
+  .options__card--gain-mass .options__title::before {
     left: -162px;
-    top: -25px;
+    top: -30px;
+  }
+
+  .options__description,
+  .options__card--gain-mass .options__description {
+    margin-bottom: 33px;
   }
 }

@@ -104,7 +104,7 @@
 
 @media (min-width: $tablet-width) {
   .main-menu {
-    margin-left: auto;
+    margin-left: 93px;
   }
 
   .main-menu__toggle-menu {
@@ -138,8 +138,9 @@
 @media (min-width: $desktop-width) {
   .main-menu__items {
     font-size: 20px;
-    line-height: auto;
+    line-height: 20px;
     max-width: 680px;
+    gap: 34px;
   }
 
   .main-menu__items--alternate a {
@@ -148,5 +149,9 @@
 
   .main-menu__items--alternate .main-menu__item--active a::after {
     background-color: #ffffff;
+  }
+
+  .main-menu__item--active a::after {
+    bottom: -8px;
   }
 }
