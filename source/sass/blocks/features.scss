@@ -92,6 +92,10 @@
   }
 }
 
+.features__tablet-break {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .features {
     margin-bottom: 68px;
@@ -128,6 +132,10 @@
     font-family: $primary-font;
     display: block;
     z-index: -1;
+  }
+
+  .features__tablet-break {
+    display: inline;
   }
 
   .features__description {
