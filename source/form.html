@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   <link rel="icon" href="img/favicons/favicon-vector.svg" type="image/svg+xml">
@@ -47,13 +47,14 @@
     <section class="program-selection">
       <div class="container container--increased">
         <h2 class="program-selection__title">Подбор программы</h2>
-        <p class="program-selection__description">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
+        <p class="program-selection__description">Заполните анкету, и мы подберем<br>программу питания для вашего кота
+        </p>
       </div>
       <form class="program-selection__form form" action="https://echo.htmlacademy.ru/" method="post">
 
         <fieldset class="form__section">
           <legend class="visually-hidden">Данные кота</legend>
-          <div class="container container--increased form__section--two-cols">
+          <div class="container container--increased form__group-wrapper">
             <div class="form__fields-group">
               <div class="form__field">
                 <label class="form__field-name form__field-name--required" for="cat-name">Имя</label>
@@ -98,17 +99,24 @@
 
         <fieldset class="form__section form__section--with-line form__section--contact-data">
           <div class="container container--increased">
-            <legend class="form__section-name">Контактные данные<br class="form__section-name-separator"> (владельца кота)</legend>
+            <legend class="form__section-name">Контактные данные<br class="form__section-name-separator"> (владельца
+              кота)</legend>
             <div class="form__fields-group form__fields-group--near">
               <div class="form__field">
                 <label class="form__field-name form__field-name--required" for="user-mail">E-mail</label>
-                <input class="form__field-input form__field--email" type="email" name="user-mail" id="user-mail"
-                  required value="kuklachev@gmail.com">
+                <input class="form__field-input form__field-input--email" type="email"
+                  name="user-mail" id="user-mail" required value="kuklachev@gmail.com">
+                <svg class="form__field-icon form__field-icon--mail" width="17" height="14">
+                  <use xlink:href="./img/sprite.svg#mail-icon" />
+                </svg>
               </div>
               <div class="form__field">
                 <label class="form__field-name form__field-name--required" for="user-phone">Телефон</label>
-                <input class="form__field-input form__field--phone" type="tel" name="user-phone" id="user-phone"
+                <input class="form__field-input form__field-input--phone" type="tel" name="user-phone" id="user-phone"
                   required value="8 (960) 900-60-90">
+                <svg class="form__field-icon" width="16" height="16">
+                  <use xlink:href="./img/sprite.svg#phone-icon" />
+                </svg>
               </div>
             </div>
           </div>
@@ -214,7 +222,7 @@
         <a href="#" class="footer__html-academy-logo">
           HTML Academy
           <svg class="footer__html-academy-logo-icon" width="27" height="34">
-            <use xlink:href="./img/sprite.svg#htmlacademy-logo"/>
+            <use xlink:href="./img/sprite.svg#htmlacademy-logo" />
           </svg>
         </a>
       </div>

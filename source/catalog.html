@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   <link rel="icon" href="img/favicons/favicon-vector.svg" type="image/svg+xml">
@@ -55,10 +55,12 @@
             <a class="product-card__link product-card__link--image" href="#">
               <picture>
                 <source media="(min-width: 768px)"
-                  srcset="./img/catalog/tablet/catalog-1.png 1x, ./img/catalog/tablet/catalog-1@2x.png 2x">
-                <img class="product-card__image"
+                  srcset="./img/catalog/tablet/catalog-1.webp 1x, ./img/catalog/tablet/catalog-1@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)"
+                  srcset="./img/catalog/tablet/catalog-1.png 1x, ./img/catalog/tablet/catalog-1@2x.png 2x" type="image/png">
+                <img class="product-card__image product-card__image--smaller"
                   srcset="./img/catalog/mobile/catalog-1@2x.png 2x"
-                  src="./img/catalog/mobile/catalog-1.png" width="161" height="171" alt="Cat Energy Курица">
+                  src="./img/catalog/mobile/catalog-1.png" width="161" height="171" alt="Cat Energy Курица" type="image/png">
               </picture>
             </a>
             <div class="product-card__text">
@@ -89,10 +91,12 @@
             <a class="product-card__link product-card__link--image" href="#">
               <picture>
                 <source media="(min-width: 768px)"
-                  srcset="./img/catalog/tablet/catalog-2.png 1x, ./img/catalog/tablet/catalog-2@2x.png 2x">
+                  srcset="./img/catalog/tablet/catalog-2.webp 1x, ./img/catalog/tablet/catalog-2@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)"
+                  srcset="./img/catalog/tablet/catalog-2.png 1x, ./img/catalog/tablet/catalog-2@2x.png 2x" type="image/png">
                 <img class="product-card__image"
                   srcset="./img/catalog/mobile/catalog-2@2x.png 2x"
-                  src="./img/catalog/mobile/catalog-2.png" width="161" height="171" alt="Cat Energy Курица">
+                  src="./img/catalog/mobile/catalog-2.png" width="161" height="171" alt="Cat Energy Курица" type="image/png">
               </picture>
             </a>
             <div class="product-card__text">
@@ -123,10 +127,12 @@
             <a class="product-card__link product-card__link--image" href="#">
               <picture>
                 <source media="(min-width: 768px)"
-                  srcset="./img/catalog/tablet/catalog-3.png 1x, ./img/catalog/tablet/catalog-3@2x.png 2x">
-                <img class="product-card__image"
+                  srcset="./img/catalog/tablet/catalog-3.webp 1x, ./img/catalog/tablet/catalog-3@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)"
+                  srcset="./img/catalog/tablet/catalog-3.png 1x, ./img/catalog/tablet/catalog-3@2x.png 2x" type="image/png">
+                <img class="product-card__image product-card__image--even-smaller"
                   srcset="./img/catalog/mobile/catalog-3@2x.png 2x"
-                  src="./img/catalog/mobile/catalog-3.png" width="161" height="171" alt="Cat Energy Курица">
+                  src="./img/catalog/mobile/catalog-3.png" width="161" height="171" alt="Cat Energy Рыба" type="image/png">
               </picture>
             </a>
             <div class="product-card__text">
@@ -155,12 +161,13 @@
         <li class="catalog__item product-card">
           <div class="product-card__info">
             <a class="product-card__link product-card__link--image" href="#">
-              <picture>
+              <picture><source media="(min-width: 768px)"
+                srcset="./img/catalog/tablet/catalog-4.webp 1x, ./img/catalog/tablet/catalog-4@2x.webp 2x" type="image/webp">
                 <source media="(min-width: 768px)"
-                  srcset="./img/catalog/tablet/catalog-4.png 1x, ./img/catalog/tablet/catalog-4@2x.png 2x">
+                  srcset="./img/catalog/tablet/catalog-4.png 1x, ./img/catalog/tablet/catalog-4@2x.png 2x" type="image/png">
                 <img class="product-card__image"
                   srcset="./img/catalog/mobile/catalog-4@2x.png 2x"
-                  src="./img/catalog/mobile/catalog-4.png" width="161" height="171" alt="Cat Energy Курица">
+                  src="./img/catalog/mobile/catalog-4.png" width="161" height="171" alt="Cat Energy Рыба" type="image/png">
               </picture>
             </a>
             <div class="product-card__text">
@@ -189,12 +196,13 @@
         <li class="catalog__item product-card">
           <div class="product-card__info">
             <a class="product-card__link product-card__link--image" href="#">
-              <picture>
+              <picture><source media="(min-width: 768px)"
+                srcset="./img/catalog/tablet/catalog-5.webp 1x, ./img/catalog/tablet/catalog-5@2x.webp 2x" type="image/webp">
                 <source media="(min-width: 768px)"
-                  srcset="./img/catalog/tablet/catalog-5.png 1x, ./img/catalog/tablet/catalog-5@2x.png 2x">
-                <img class="product-card__image"
+                  srcset="./img/catalog/tablet/catalog-5.png 1x, ./img/catalog/tablet/catalog-5@2x.png 2x" type="image/png">
+                <img class="product-card__image product-card__image--even-smaller"
                   srcset="./img/catalog/mobile/catalog-5@2x.png 2x"
-                  src="./img/catalog/mobile/catalog-5.png" width="161" height="171" alt="Cat Energy Курица">
+                  src="./img/catalog/mobile/catalog-5.png" width="161" height="171" alt="Cat Energy Гречка" type="image/png">
               </picture>
             </a>
             <div class="product-card__text">
@@ -223,12 +231,13 @@
         <li class="catalog__item product-card">
           <div class="product-card__info">
             <a class="product-card__link product-card__link--image" href="#">
-              <picture>
+              <picture><source media="(min-width: 768px)"
+                srcset="./img/catalog/tablet/catalog-6.webp 1x, ./img/catalog/tablet/catalog-6@2x.webp 2x" type="image/webp">
                 <source media="(min-width: 768px)"
-                  srcset="./img/catalog/tablet/catalog-6.png 1x, ./img/catalog/tablet/catalog-6@2x.png 2x">
+                  srcset="./img/catalog/tablet/catalog-6.png 1x, ./img/catalog/tablet/catalog-6@2x.png 2x" type="image/png">
                 <img class="product-card__image"
                   srcset="./img/catalog/mobile/catalog-6@2x.png 2x"
-                  src="./img/catalog/mobile/catalog-6.png" width="161" height="171" alt="Cat Energy Курица">
+                  src="./img/catalog/mobile/catalog-6.png" width="161" height="171" alt="Cat Energy Гречка" type="image/png">
               </picture>
             </a>
             <div class="product-card__text">
@@ -258,12 +267,13 @@
         <li class="catalog__item product-card">
           <div class="product-card__info">
             <a class="product-card__link product-card__link--image" href="#">
-              <picture>
+              <picture><source media="(min-width: 768px)"
+                srcset="./img/catalog/tablet/catalog-7.webp 1x, ./img/catalog/tablet/catalog-7@2x.webp 2x" type="image/webp">
                 <source media="(min-width: 768px)"
-                  srcset="./img/catalog/tablet/catalog-7.png 1x, ./img/catalog/tablet/catalog-7@2x.png 2x">
-                <img class="product-card__image"
+                  srcset="./img/catalog/tablet/catalog-7.png 1x, ./img/catalog/tablet/catalog-7@2x.png 2x" type="image/png">
+                <img class="product-card__image product-card__image--smaller"
                   srcset="./img/catalog/mobile/catalog-7@2x.png 2x"
-                  src="./img/catalog/mobile/catalog-1.png" width="161" height="171" alt="Cat Energy Курица">
+                  src="./img/catalog/mobile/catalog-1.png" width="161" height="171" alt="Cat Energy Рис" type="image/png">
               </picture>
             </a>
             <div class="product-card__text">

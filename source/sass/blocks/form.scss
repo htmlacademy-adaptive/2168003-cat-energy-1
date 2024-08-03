@@ -50,22 +50,7 @@
 .form__field {
   display: flex;
   align-items: center;
-
-  &--email,
-  &--phone {
-    background-repeat: no-repeat;
-    background-position: right 13px center;
-  }
-
-  &--email {
-    background-image: url("../../img/icons/envelope.svg");
-    background-size: 17px 13px;
-  }
-
-  &--phone {
-    background-image: url("../../img/icons/phone.svg");
-    background-size: 15px;
-  }
+  position: relative;
 }
 
 .form__field-name {
@@ -104,11 +89,27 @@
 
   &:focus {
     outline: 2px solid #444444;
+
+    & + .form__field-icon {
+      stroke: #68b738;
+    }
   }
 
   &--error {
     outline: 2px solid #ff8282;
+
+    & + .form__field-icon {
+      stroke: #ff8282;
+    }
   }
+}
+
+.form__field-icon {
+  stroke: #222222;
+  position: absolute;
+  right: 14px;
+  top: 15px;
+  fill: none;
 }
 
 .form__field-input--textarea {
@@ -233,6 +234,11 @@
   .form__field-input {
     font-size: 20px;
     padding: 11px 18px;
+  }
+
+  .form__field-icon {
+    right: 15px;
+    top: 20px;
   }
 
   .form__fields-group--with-borders {
@@ -370,14 +376,14 @@
     padding: 37px 40px 35px 27px;
   }
 
-  .form__section--two-cols {
+  .form__group-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
   }
 
-  .form__section--two-cols .form__fields-group {
+  .form__group-wrapper .form__fields-group {
     width: 570px;
   }
 
@@ -421,9 +427,8 @@
     gap: 80px;
   }
 
-  .form__field--email,
-  .form__field--phone {
-    background-position: right 17px center;
+  .form__field-icon {
+    right: 17px;
   }
 
   .form__section-name--commentary {
