@@ -67,7 +67,7 @@ export const copyImages = () => {
 
 export const images2WebP = () => {
   return gulp.src(['source/img/**/*.{jpg,png}', '!source/img/favicons/*.png'])
-    .pipe(webp())
+    .pipe(webp({quality: 90}))
     .pipe(gulp.dest('build/img'))
 }
 
@@ -145,6 +145,8 @@ export default gulp.series(
     html,
     styles,
     js,
+    makeSprite,
+    images2WebP,
     server,
     watcher
   )
