@@ -4,7 +4,7 @@
 
 .footer__logo {
   fill: #111111;
-  transition: fill 250ms;
+  transition: fill $animation-duration;
 
   &:hover,
   &:focus {
@@ -19,16 +19,16 @@
 .footer__social-icon {
   fill: #666666;
   transition:
-    fill 250ms,
-    opacity 250ms;
+    fill $animation-duration,
+    opacity $animation-duration;
 
   &:hover,
   &:focus {
-    fill: #68b738;
+    fill: $primary-color;
   }
 
   &:active {
-    fill: #68b738;
+    fill: $primary-color;
     opacity: 0.3;
   }
 }
@@ -54,32 +54,38 @@
 
 .footer__html-academy-logo {
   font-family: $alternate-font;
-  font-size: 16px;
+  font-size: $size-md;
   line-height: 20px;
   text-decoration: none;
-  color: #444444;
+  color: $text-secondary-color;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  transition: opacity 250ms;
+  transition: opacity $animation-duration;
   gap: 23px;
   align-items: center;
 
-  &-icon {
-    transition:
-      opacity 250ms,
-      fill 250ms;
+  &:hover .footer__html-academy-logo-icon,
+  &:focus .footer__html-academy-logo-icon {
+    fill: $primary-color;
   }
 
-  &:hover &-icon,
-  &:focus &-icon,
-  &-icon:hover,
-  &-icon:focus {
-    fill: #68b738;
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.footer__html-academy-logo-icon {
+  transition:
+    opacity $animation-duration,
+    fill $animation-duration;
+
+  &:hover,
+  &:focus {
+    fill: $primary-color;
   }
 
-  &:active,
-  &-icon:active {
+  &:active {
     opacity: 0.3;
   }
 }

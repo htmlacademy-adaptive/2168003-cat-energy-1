@@ -11,17 +11,17 @@
 @mixin header-2 {
   @include mp0;
   font-family: $primary-font;
-  font-size: 36px;
+  font-size: $size-xl;
   line-height: 40px;
 
   @media (min-width: $desktop-width) {
-    font-size: 60px;
+    font-size: $size-xxl;
     line-height: 60px;
   }
 }
 
 @mixin header-3 {
   @include header-2;
-  font-size: 36px;
+  font-size: $size-xl;
   line-height: 36px;
 }

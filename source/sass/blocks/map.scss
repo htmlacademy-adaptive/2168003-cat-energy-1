@@ -16,13 +16,13 @@
 }
 
 .map__text--alternate-bg {
-  background-color: #f2f2f2;
+  background-color: $secondary-color;
 }
 
 .map__title {
   @include mp0;
   font-family: $primary-font;
-  font-size: 16px;
+  font-size: $size-md;
   line-height: 20px;
   color: #111111;
   text-transform: uppercase;
@@ -31,9 +31,9 @@
 .map__address {
   @include mp0;
   font-family: $alternate-font;
-  font-size: 14px;
+  font-size: $size-sm;
   line-height: 20px;
-  color: #444444;
+  color: $text-secondary-color;
   width: 140px;
   display: inline-block;
   justify-self: end;
@@ -42,6 +42,8 @@
 .map__actual-map {
   background: #ffffff url("../../img/map-mobile.jpg") no-repeat center center / cover;
   height: 362px;
+  width: 100%;
+  border: 0;
 
   @media (min-resolution: 2dppx) {
     background: #ffffff url("../../img/map-mobile@2x.jpg") no-repeat center center / cover;
@@ -63,13 +65,13 @@
   }
 
   .map__title {
-    font-size: 20px;
+    font-size: $size-lg;
     line-height: 26px;
     width: 170px;
   }
 
   .map__address {
-    font-size: 16px;
+    font-size: $size-md;
     text-align: right;
     flex-grow: 1;
     max-width: 160px;

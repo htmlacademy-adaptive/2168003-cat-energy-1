@@ -4,19 +4,19 @@
   justify-content: center;
   align-items: center;
   background-color: $primary-color;
-  color: #ffffff;
+  color: $text-primary-color;
   text-decoration: none;
   font-family: $primary-font;
   text-transform: uppercase;
   text-align: center;
-  font-size: 16px;
+  font-size: $size-md;
   line-height: 20px;
   border: none;
   padding: 10px;
   cursor: pointer;
   transition:
-    background-color 250ms,
-    color 250ms;
+    background-color $animation-duration,
+    color $animation-duration;
 
   &:hover,
   &:focus {
@@ -29,21 +29,21 @@
   }
 
   &--secondary {
-    background-color: #f2f2f2;
-    color: #444444;
+    background-color: $secondary-color;
+    color: $text-secondary-color;
 
     &:hover,
     &:focus,
     &:active {
       background-color: #ebebeb;
-      color: #444444;
+      color: $text-secondary-color;
     }
   }
 }
 
 @media (min-width: $tablet-width) {
   .button {
-    font-size: 16px;
+    font-size: $size-md;
     line-height: 20px;
   }
 }

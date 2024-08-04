@@ -4,7 +4,7 @@
 
 .program-selection__title {
   @include header-2;
-  font-size: 36px;
+  font-size: $size-xl;
   line-height: 36px;
   margin: 27px 0 37px;
   text-align: left;
@@ -13,7 +13,7 @@
 
 .program-selection__description {
   font-family: $primary-font;
-  font-size: 14px;
+  font-size: $size-sm;
   line-height: 18px;
   text-transform: uppercase;
   margin: 0 0 40px 0;
@@ -21,7 +21,7 @@
 
 @media (min-width: $tablet-width) {
   .program-selection__title {
-    font-size: 60px;
+    font-size: $size-xxl;
     line-height: 60px;
     letter-spacing: -2px;
     margin-top: 51px;
@@ -29,7 +29,7 @@
   }
 
   .program-selection__description {
-    font-size: 20px;
+    font-size: $size-lg;
     line-height: 30px;
     width: 340px;
     margin-bottom: 65px;

@@ -21,9 +21,9 @@
   @include mp0;
   display: block;
   font-family: $alternate-font;
-  font-size: 12px;
+  font-size: $size-xs;
   line-height: 12px;
-  color: #444444;
+  color: $text-secondary-color;
   position: relative;
   top: -8px;
   left: 17px;
@@ -46,7 +46,7 @@
     top: -8px;
     left: 5px;
     width: 150px;
-    font-size: 14px;
+    font-size: $size-sm;
     line-height: 14px;
   }
 
@@ -69,8 +69,8 @@
   }
 
   .stats-list__description {
-    background-color: #f2f2f2;
-    border-color: #f2f2f2;
+    background-color: $secondary-color;
+    border-color: $secondary-color;
     top: -10px;
     left: 5px;
   }

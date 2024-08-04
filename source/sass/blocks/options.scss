@@ -58,13 +58,11 @@
     top: -5px;
   }
 
-  // It's needed for Pixel Perfect
   .options__card--fat-loss & {
     top: -1px;
     letter-spacing: -1px;
   }
 
-  // It's needed for Pixel Perfect
   .options__card--gain-mass & {
     top: 1px;
     left: 2px;
@@ -75,7 +73,7 @@
 .options__description {
   @include mp0;
   font-family: $alternate-font;
-  font-size: 14px;
+  font-size: $size-sm;
   line-height: 18px;
   margin-bottom: 41px;
   position: relative;
@@ -90,7 +88,6 @@
     left: 0;
   }
 
-  // Purely for PP
   .options__card--gain-mass & {
     margin-bottom: 43px;
   }
@@ -98,12 +95,12 @@
 
 .options__link {
   font-family: $primary-font;
-  font-size: 16px;
+  font-size: $size-md;
   line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
-  transition: opacity 250ms;
+  transition: opacity $animation-duration;
 
   &:hover .options__arrow {
     transform: scale(1.44);
@@ -120,8 +117,8 @@
   position: relative;
   top: -1px;
   transition:
-    transform 250ms,
-    opacity 250ms;
+    transform $animation-duration,
+    opacity $animation-duration;
 }
 
 .options__arrow line {
@@ -169,7 +166,7 @@
 
   .options__title {
     margin: 0 0 24px 0;
-    font-size: 36px;
+    font-size: $size-xl;
     line-height: 36px;
 
     &::before {
@@ -181,13 +178,13 @@
   }
 
   .options__description {
-    font-size: 16px;
+    font-size: $size-md;
     line-height: 24px;
     margin-bottom: 58px;
   }
 
   .options__link {
-    font-size: 20px;
+    font-size: $size-lg;
   }
 
   .options__arrow {

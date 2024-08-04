@@ -13,12 +13,12 @@
 .hero__title,
 .hero__subtitle {
   @include mp0;
-  color: #ffffff;
+  color: $text-primary-color;
   text-align: center;
 }
 
 .hero__title {
-  font-size: 36px;
+  font-size: $size-xl;
   line-height: 36px;
   font-weight: 400;
   font-family: $primary-font;
@@ -28,7 +28,7 @@
 .hero__subtitle {
   font-family: $primary-font;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: $size-sm;
 }
 
 .hero__call-to-action {
@@ -73,7 +73,7 @@
   }
 
   .hero__cat-image-mobile::after {
-    background-color: #68b738;
+    background-color: $primary-color;
     opacity: 85%;
   }
 }
@@ -90,14 +90,14 @@
   }
 
   .hero__title {
-    font-size: 60px;
+    font-size: $size-xxl;
     line-height: 60px;
     max-width: 420px;
     margin-bottom: 40px;
   }
 
   .hero__subtitle {
-    font-size: 20px;
+    font-size: $size-lg;
     line-height: 20px;
   }
 
@@ -109,10 +109,10 @@
 
   .hero__call-to-action {
     margin-left: 90px;
-    font-size: 20px;
+    font-size: $size-lg;
     line-height: 26px;
     width: 244px;
-    height: 54px;
+    min-height: 54px;
   }
 
   .hero__image {
