@@ -23,9 +23,9 @@
 }
 
 .example__description {
-  color: #444444;
+  color: $text-secondary-color;
   font-family: $alternate-font;
-  font-size: 14px;
+  font-size: $size-sm;
   line-height: 18px;
   margin-bottom: 19px;
   width: 280px;
@@ -39,7 +39,7 @@
   @include mp0;
   font-family: $primary-font;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: $size-sm;
   line-height: 20px;
   display: block;
   text-align: center;
@@ -70,7 +70,7 @@
   }
 
   .example__title {
-    font-size: 60px;
+    font-size: $size-xxl;
     line-height: 60px;
     margin-bottom: 60px;
     letter-spacing: -2px;
@@ -78,7 +78,7 @@
 
   .example__description {
     width: 100%;
-    font-size: 16px;
+    font-size: $size-md;
     line-height: 24px;
     margin-bottom: 55px;
   }
@@ -92,7 +92,7 @@
 
   .example__total {
     text-align: right;
-    font-size: 20px;
+    font-size: $size-lg;
     line-height: 28px;
     padding-top: 9px;
   }
@@ -121,7 +121,7 @@
 
   .example::after {
     top: 139px;
-    background-color: #f2f2f2;
+    background-color: $secondary-color;
     min-height: 462px;
     height: auto;
   }

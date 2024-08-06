@@ -38,14 +38,14 @@
 
   &:hover,
   &:focus {
-    background-color: #68b738;
+    background-color: $primary-color;
 
     .slider-comparison__curtain-icon {
-      fill: #68b738;
+      fill: $primary-color;
     }
 
     .slider-comparison__button {
-      border: 2px solid #68b738;
+      border: 2px solid $primary-color;
     }
   }
 
@@ -84,7 +84,7 @@
   .slider-comparison {
     z-index: 2;
     height: 512px;
-    width: 560px;
+    min-width: 560px;
     margin: 0 auto;
   }
 

@@ -11,7 +11,7 @@
 .main-header__logo {
   display: flex;
   align-items: center;
-  transition: opacity 250ms;
+  transition: opacity $animation-duration;
 
   &:hover {
     opacity: 0.8;

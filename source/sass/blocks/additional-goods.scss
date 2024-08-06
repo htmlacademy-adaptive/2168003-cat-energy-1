@@ -8,7 +8,7 @@
     height: 2px;
     width: 50%;
     left: 50%;
-    background-color: #68b738;
+    background-color: $primary-color;
     position: absolute;
     top: 14px;
     z-index: -1;
@@ -45,7 +45,7 @@
 .additional-goods__name {
   @include mp0;
   font-family: $primary-font;
-  font-size: 16px;
+  font-size: $size-md;
   line-height: 16px;
   text-transform: uppercase;
   font-weight: 700;
@@ -63,7 +63,7 @@
 .additional-goods__price {
   @include mp0;
   font-family: $alternate-font;
-  font-size: 14px;
+  font-size: $size-sm;
   line-height: 14px;
 }
 
@@ -73,7 +73,7 @@
 
 .additional-goods__banner {
   width: 100%;
-  height: 290px;
+  min-height: 290px;
   padding: 187px 61px 43px 58px;
   background-color: $primary-color;
   text-align: center;
@@ -101,7 +101,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 59px;
+    top: 50%;
+    transform: translateY(-50%);
     left: 101px;
     width: 78px;
     height: 81px;
@@ -113,9 +114,9 @@
 .additional-goods__banner-description {
   @include mp0;
   font-family: $alternate-font;
-  font-size: 16px;
+  font-size: $size-md;
   line-height: 20px;
-  color: #ffffff;
+  color: $text-primary-color;
   position: relative;
   z-index: 2;
   top: 2px;
@@ -134,7 +135,7 @@
   }
 
   .additional-goods__banner {
-    height: 200px;
+    min-height: 200px;
     padding: 71px 125px 69px 421px;
     background-image: url("../../img/catalog-banner/catalog-banner-tablet.jpg");
 
@@ -144,7 +145,7 @@
   }
 
   .additional-goods__title {
-    font-size: 36px;
+    font-size: $size-xl;
     line-height: 36px;
     border-right: 40px solid #ffffff;
     border-left: 40px solid #ffffff;
@@ -176,14 +177,14 @@
   }
 
   .additional-goods__name {
-    font-size: 20px;
+    font-size: $size-lg;
     line-height: 20px;
     margin-bottom: 25px;
   }
 
   .additional-goods__volume,
   .additional-goods__price {
-    font-size: 16px;
+    font-size: $size-md;
     line-height: 20px;
   }
 
@@ -232,7 +233,7 @@
 
   .additional-goods__name {
     margin-right: auto;
-    font-size: 20px;
+    font-size: $size-lg;
     line-height: 16px;
   }
 
@@ -244,7 +245,7 @@
   .additional-goods__volume,
   .additional-goods__price {
     @include mp0;
-    font-size: 16px;
+    font-size: $size-md;
     line-height: 20px;
   }
 

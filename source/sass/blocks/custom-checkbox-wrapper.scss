@@ -1,6 +1,6 @@
 .custom-checkbox-wrapper__label {
   font-family: $primary-font;
-  font-size: 16px;
+  font-size: $size-md;
   margin-left: 45px;
   text-transform: uppercase;
 }
@@ -17,7 +17,7 @@
   display: block;
   top: -4px;
   position: absolute;
-  transition: border 250ms;
+  transition: border $animation-duration;
 }
 
 .custom-checkbox-wrapper__actual-checkbox:disabled ~ .custom-checkbox-wrapper__custom-checkbox,
@@ -56,7 +56,7 @@
   }
 
   .custom-checkbox-wrapper__label {
-    font-size: 20px;
+    font-size: $size-lg;
     margin-left: 60px;
   }
 }

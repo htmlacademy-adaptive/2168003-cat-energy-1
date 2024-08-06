@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: $size-lg;
 }
 
 .main-menu__items--closed {
@@ -17,7 +17,7 @@
   text-decoration: none;
   color: #000000;
   position: relative;
-  transition: opacity 250ms;
+  transition: opacity $animation-duration;
 
   &[href]:hover,
   &[href]:focus {
@@ -137,14 +137,14 @@
 
 @media (min-width: $desktop-width) {
   .main-menu__items {
-    font-size: 20px;
+    font-size: $size-lg;
     line-height: 20px;
     max-width: 680px;
     gap: 34px;
   }
 
   .main-menu__items--alternate a {
-    color: #ffffff;
+    color: $text-primary-color;
   }
 
   .main-menu__items--alternate .main-menu__item--active a::after {

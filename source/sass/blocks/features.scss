@@ -31,8 +31,8 @@
 .features__description {
   @include mp0;
   font-family: $alternate-font;
-  color: #444444;
-  font-size: 14px;
+  color: $text-secondary-color;
+  font-size: $size-sm;
   line-height: 18px;
   display: block;
   position: relative;
@@ -87,7 +87,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 16px;
+    font-size: $size-md;
     line-height: 24px;
   }
 }
@@ -103,7 +103,7 @@
 
   .features__title {
     margin-bottom: 62px;
-    font-size: 60px;
+    font-size: $size-xxl;
     line-height: 60px;
     letter-spacing: -2px;
   }
@@ -128,7 +128,7 @@
     left: 116px;
     font-size: 280px;
     line-height: 280px;
-    color: #f2f2f2;
+    color: $secondary-color;
     font-family: $primary-font;
     display: block;
     z-index: -1;
@@ -140,7 +140,7 @@
 
   .features__description {
     margin-left: 0;
-    font-size: 16px;
+    font-size: $size-md;
     line-height: 24px;
     width: 245px;
 

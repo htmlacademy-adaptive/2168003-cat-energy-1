@@ -55,7 +55,7 @@
       <form class="program-selection__form form" action="https://echo.htmlacademy.ru/" method="post">
 
         <fieldset class="form__section">
-          <legend class="visually-hidden">Данные кота</legend>
+          <h3 class="visually-hidden">Данные кота</h3>
           <div class="container container--increased form__group-wrapper">
             <div class="form__fields-group">
               <div class="form__field">
@@ -63,11 +63,11 @@
                 <input class="form__field-input" type="text" name="cat-name" id="cat-name" required value="Барсик">
               </div>
               <div class="form__field">
-                <label class="form__field-name form__field-name--required" for="at-weight">Вес (кг)</label>
+                <label class="form__field-name form__field-name--required" for="cat-weight">Вес (кг)</label>
                 <input class="form__field-input" type="number" name="cat-weight" id="cat-weight" required value="7">
               </div>
               <div class="form__field">
-                <label class="form__field-name" for="at-age">Возраст (лет)</label>
+                <label class="form__field-name" for="cat-age">Возраст (лет)</label>
                 <input class="form__field-input" type="number" name="cat-age" id="cat-age" value="7">
               </div>
             </div>
@@ -101,8 +101,8 @@
 
         <fieldset class="form__section form__section--with-line form__section--contact-data">
           <div class="container container--increased">
-            <legend class="form__section-name">Контактные данные<br class="form__section-name-separator"> (владельца
-              кота)</legend>
+            <h3 class="form__section-name">Контактные данные<br class="form__section-name-separator"> (владельца
+              кота)</h3>
             <div class="form__fields-group form__fields-group--near">
               <div class="form__field">
                 <label class="form__field-name form__field-name--required" for="user-mail">E-mail</label>
@@ -126,7 +126,7 @@
 
         <fieldset class="form__section form__section--with-line form__section--commentary">
           <div class="container container--increased">
-            <legend class="form__section-name form__section-name--commentary">Комментарий</legend>
+            <h3 class="form__section-name form__section-name--commentary">Комментарий</h3>
             <label class="form__field-name visually-hidden" for="user-commentary">Поле для комментариев</label>
             <textarea class="form__field-input form__field-input--textarea" name="user-commentary"
               id="user-commentary">Расскажите обо всех повадках кота</textarea>
@@ -135,7 +135,7 @@
 
         <fieldset class="form__section form__section--with-line form__section--additional">
           <div class="container container--increased">
-            <legend class="form__section-name form__section-name--additional">Дополнительно</legend>
+            <h3 class="form__section-name form__section-name--additional">Дополнительно</h3>
             <div class="form__checkboxes-wrapper">
               <label class="custom-checkbox-wrapper">
                 <input class="custom-checkbox-wrapper__actual-checkbox visually-hidden" type="checkbox"
@@ -182,7 +182,8 @@
             </p>
           </div>
         </div>
-        <div class="map__actual-map"></div>
+        <!-- Disclaimer: I use this API key purely for the display purposes during the learning. I will revoke it once I finish the project. -->
+        <iframe class="map__actual-map" width="320" height="362" style="border: 0;" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:Ej5Cb2xzaGF5YSBLb255dXNoZW5uYXlhIFN0LCAxOSwgU2Fua3QtUGV0ZXJidXJnLCBSdXNzaWEsIDE5MTE4NiIwEi4KFAoSCfcsZjUOMZZGEX80Jep2amh0EBMqFAoSCV_VYbYPMZZGETDk610Ff8zQ&key=AIzaSyBj39EgHm3MamQss9_g-kKe7GxejeIg1lQ"></iframe>
       </div>
     </section>
 

@@ -55,10 +55,10 @@
 
 .form__field-name {
   font-family: $primary-font;
-  color: #444444;
+  color: $text-secondary-color;
   text-transform: uppercase;
   margin-right: 14px;
-  font-size: 16px;
+  font-size: $size-md;
   line-height: 18px;
 }
 
@@ -73,10 +73,10 @@
 .form__field-input {
   border: 1px solid #e7e7e7;
   padding: 13px 14px;
-  font-size: 16px;
+  font-size: $size-md;
   line-height: 18px;
   font-family: $primary-font;
-  color: #444444;
+  color: $text-secondary-color;
   text-transform: uppercase;
   flex-grow: 1;
   position: relative;
@@ -88,10 +88,10 @@
   }
 
   &:focus {
-    outline: 2px solid #444444;
+    outline: 2px solid $text-secondary-color;
 
     & + .form__field-icon {
-      stroke: #68b738;
+      stroke: $primary-color;
     }
   }
 
@@ -104,11 +104,17 @@
   }
 }
 
+.form__field-input--email,
+.form__field-input--phone {
+  padding-right: 36px;
+}
+
 .form__field-icon {
   stroke: #222222;
   position: absolute;
   right: 14px;
-  top: 15px;
+  top: 50%;
+  transform: translateY(-50%);
   fill: none;
 }
 
@@ -130,8 +136,8 @@
 
 .form__radio-label {
   font-family: $primary-font;
-  color: #444444;
-  font-size: 16px;
+  color: $text-secondary-color;
+  font-size: $size-md;
   line-height: 18px;
   text-transform: uppercase;
   margin-left: 45px;
@@ -153,14 +159,14 @@
   border-radius: 50%;
   top: -7px;
   cursor: pointer;
-  transition: border 250ms;
+  transition: border $animation-duration;
 }
 
 .form__radio-input input:checked ~ .form__custom-radio::after {
   content: "";
   width: 13px;
   height: 13px;
-  background-color: #68b738;
+  background-color: $primary-color;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -173,13 +179,14 @@
   height: 2px;
   width: 50%;
   left: 50%;
-  background-color: #68b738;
+  background-color: $primary-color;
   position: absolute;
   top: 14px;
   z-index: -1;
 }
 
 .form__section-name {
+  @include mp0;
   font-size: 24px;
   line-height: 26px;
   font-family: $primary-font;
@@ -190,7 +197,7 @@
   background-color: #ffffff;
   border-right: 25px solid #ffffff;
   z-index: 2;
-  letter-spacing: -0.2px;
+  letter-spacing: -1px;
 }
 
 .form__submit-group {
@@ -205,7 +212,7 @@
 .form__footnote {
   margin: 0 auto;
   font-family: $alternate-font;
-  font-size: 14px;
+  font-size: $size-sm;
   line-height: 16px;
 }
 
@@ -228,17 +235,16 @@
 
 @media (min-width: $tablet-width) {
   .form__field-name {
-    font-size: 20px;
+    font-size: $size-lg;
   }
 
   .form__field-input {
-    font-size: 20px;
+    font-size: $size-lg;
     padding: 11px 18px;
   }
 
   .form__field-icon {
     right: 15px;
-    top: 20px;
   }
 
   .form__fields-group--with-borders {
@@ -264,7 +270,7 @@
   }
 
   .form__section-name {
-    font-size: 36px;
+    font-size: $size-xl;
     line-height: 36px;
     border-right: 40px solid #ffffff;
     border-left: 40px solid #ffffff;
@@ -286,7 +292,7 @@
   }
 
   .form__radio-label {
-    font-size: 20px;
+    font-size: $size-lg;
     margin-left: 60px;
   }
 
@@ -306,7 +312,7 @@
   .form__submit-button {
     width: 284px;
     height: 54px;
-    font-size: 20px;
+    font-size: $size-lg;
     line-height: 26px;
   }
 
@@ -316,7 +322,7 @@
 
   .form__footnote {
     margin: 0 61px 25px;
-    font-size: 16px;
+    font-size: $size-md;
     line-height: 16px;
   }
 
@@ -383,6 +389,12 @@
     align-items: flex-start;
   }
 
+
+  .form__field-input--email,
+  .form__field-input--phone {
+    padding-right: 44px;
+  }
+
   .form__group-wrapper .form__fields-group {
     width: 570px;
   }
@@ -412,7 +424,7 @@
 
   .form__footnote {
     margin-left: 80px;
-    font-size: 16px;
+    font-size: $size-md;
   }
 
   .form__section {
