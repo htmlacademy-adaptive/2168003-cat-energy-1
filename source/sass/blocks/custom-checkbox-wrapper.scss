@@ -41,6 +41,10 @@
   border: 1px solid #bababa;
 }
 
+.custom-checkbox-wrapper__actual-checkbox:focus ~ .custom-checkbox-wrapper__custom-checkbox {
+  border: 1px solid #444444;
+}
+
 @media (min-width: $tablet-width) {
   .custom-checkbox-wrapper__custom-checkbox {
     width: 40px;

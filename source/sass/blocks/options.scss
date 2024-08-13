@@ -46,6 +46,7 @@
   text-transform: uppercase;
   margin: 0 0 29px 70px;
   position: relative;
+  font-weight: 400;
 
   &::before {
     width: 50px;
@@ -60,13 +61,11 @@
 
   .options__card--fat-loss & {
     top: -1px;
-    letter-spacing: -1px;
   }
 
   .options__card--gain-mass & {
     top: 1px;
     left: 2px;
-    letter-spacing: -1px;
   }
 }
 

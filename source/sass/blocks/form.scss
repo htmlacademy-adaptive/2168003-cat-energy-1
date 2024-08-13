@@ -197,7 +197,7 @@
   background-color: #ffffff;
   border-right: 25px solid #ffffff;
   z-index: 2;
-  letter-spacing: -1px;
+  font-weight: 400;
 }
 
 .form__submit-group {
@@ -231,6 +231,10 @@
 
 .form__radio-input:hover .form__custom-radio {
   border: 1px solid #bababa;
+}
+
+.form__actual-radio:focus + .form__custom-radio {
+  border: 1px solid #444444;
 }
 
 @media (min-width: $tablet-width) {
